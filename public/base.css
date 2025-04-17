@@ -78,15 +78,34 @@ a {
 
 /*  */
 
+/* DECOR */
+
+.vl {
+  height: 1px;
+  width: 70vw;
+  border-top: 1px solid #ff671f;
+  justify-content: center;
+}
+
 .event_card_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80vw;
-  gap: 100px;
+  gap: 20px;
+  justify-content: baseline;
+  padding: 20px;
 }
 
+.event_card_wrapper a {
+  display: block;
+  margin-top: 20px;
+}
 .event_card_wrapper img {
-  width: 100px;
+  height: 100px;
+}
+
+.event_card_wrapper p {
+  margin-top: 10px;
 }
 
 .event_text_wrapper {
@@ -96,5 +115,9 @@ a {
 }
 
 .event_essentials {
-  width: 100%;
+  width: 150px;
+}
+
+h1 {
+  padding-left: 20px;
 }
