@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+root {
+  --background: #ededed;
+  --orange: #ff671f;
+  --blue: #003b5c;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "Helvetica LT STD Condensed";
+  src:
+    url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
+    url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src:
+    url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuebold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Black";
+  src:
+    url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueBlack.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src:
+    url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuelight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: "Helvetica Neue Bold";
+}
+h1 {
+  font-family: "Helvetica Neue Bold";
+  font-weight: bolder;
+  font-size: 30pt;
+  -webkit-text-stroke: 1px #ff671f;
+  text-shadow: #ff905991 0px 4px 11px;
+  color: #ededed;
+}
+h2 {
+  font-size: 14pt;
+}
+p {
+  font-family: "Helvetica Neue Light";
+  font-size: 12pt;
+}
+a {
+  font-family: "Helvetica LT STD Condensed";
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10pt;
+  color: #4a4a4a;
+}
+
+/*  */
+
+.event_card_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  gap: 100px;
+}
+
+.event_card_wrapper img {
+  width: 100px;
+}
+
+.event_text_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.event_essentials {
+  width: 100%;
+}
