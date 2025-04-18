@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+root {
+  --background: #ededed;
+  --orange: #ff671f;
+  --blue: #003b5c;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "Helvetica LT STD Condensed";
+  src:
+    url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
+    url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src:
+    url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuebold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Black";
+  src:
+    url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueBlack.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src:
+    url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuelight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h2 {
+  font-family: "Helvetica Neue Bold";
+}
+h1 {
+  font-family: "Helvetica Neue Bold";
+  font-weight: bolder;
+  font-size: 30pt;
+  -webkit-text-stroke: 1px #ff671f;
+  text-shadow: #ff905991 0px 4px 11px;
+  color: #ededed;
+}
+h2 {
+  font-size: 14pt;
+}
+p {
+  font-family: "Helvetica Neue Light";
+  font-size: 12pt;
+}
+a {
+  font-family: "Helvetica LT STD Condensed";
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10pt;
+  color: #4a4a4a;
+}
+
+/*  */
+
+/* DECOR */
+
+.vl {
+  height: 1px;
+  border-top: 1px solid #ff671f;
+  justify-content: start;
+  align-items: start;
+
+  width: 70%;
+}
+
+/*  */
+
+/* PROGRAMSIDE  CSS */
+
+@media (max-width: 800px) {
+  .title {
+    padding-right: 20px;
+  }
+  .vl {
+    width: 100%;
+  }
+
+  .event_card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .event_description {
+    margin-top: 20px;
+  }
+
+  .event_card_img {
+    display: none;
+  }
+  .event_essentials {
+    display: flex;
+    gap: 20px;
+  }
+
+  .event_card_wrapper {
+    padding: 20px 20px 20px 0px;
+  }
+
+  h1 {
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+
+  .arrow_container {
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  .arrow_container img {
+    margin-top: -4px;
+  }
+}
+
+@media (min-width: 800px) {
+  /*  */
+  /* DESKTOP */
+  /*  */
+
+  .event_card {
+    padding-left: 40px;
+  }
+  .event_card_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 20px 20px 0px;
+  }
+
+  .event_text_wrapper {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  .event_card_wrapper p {
+    margin-top: 10px;
+  }
+
+  .arrow_container {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .arrow_container img {
+    margin-top: -4px;
+  }
+
+  .event_essentials {
+    width: 150px;
+  }
+
+  .event_description {
+    position: relative;
+    max-width: 300px;
+  }
+
+  .event_card_img {
+    width: 150px;
+    margin-left: 80px;
+  }
+
+  h1 {
+    padding-left: 40px;
+  }
+
+  .title img {
+    display: flex;
+    width: 70%;
+  }
+}
+
+/*  */
