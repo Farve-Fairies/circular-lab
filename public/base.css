@@ -82,42 +82,123 @@ a {
 
 .vl {
   height: 1px;
-  width: 70vw;
   border-top: 1px solid #ff671f;
-  justify-content: center;
+  justify-content: start;
+  align-items: start;
+
+  width: 70%;
 }
 
-.event_card_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80vw;
-  gap: 20px;
-  justify-content: baseline;
-  padding: 20px;
+/*  */
+
+/* PROGRAMSIDE  CSS */
+
+@media (max-width: 800px) {
+  .title {
+    padding-right: 20px;
+  }
+  .vl {
+    width: 100%;
+  }
+
+  .event_card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .event_description {
+    margin-top: 20px;
+  }
+
+  .event_card_img {
+    display: none;
+  }
+  .event_essentials {
+    display: flex;
+    gap: 20px;
+  }
+
+  .event_card_wrapper {
+    padding: 20px 20px 20px 0px;
+  }
+
+  h1 {
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+
+  .arrow_container {
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  .arrow_container img {
+    margin-top: -4px;
+  }
 }
 
-.event_card_wrapper a {
-  display: block;
-  margin-top: 20px;
-}
-.event_card_wrapper img {
-  height: 100px;
+@media (min-width: 800px) {
+  /*  */
+  /* DESKTOP */
+  /*  */
+
+  .event_card {
+    padding-left: 40px;
+  }
+  .event_card_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 20px 20px 0px;
+  }
+
+  .event_text_wrapper {
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  .event_card_wrapper p {
+    margin-top: 10px;
+  }
+
+  .arrow_container {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 40px;
+    gap: 10px;
+  }
+
+  .arrow_container img {
+    margin-top: -4px;
+  }
+
+  .event_essentials {
+    width: 150px;
+  }
+
+  .event_description {
+    position: relative;
+    max-width: 300px;
+  }
+
+  .event_card_img {
+    width: 150px;
+    margin-left: 80px;
+  }
+
+  h1 {
+    padding-left: 40px;
+  }
+
+  .title img {
+    display: flex;
+    width: 70%;
+  }
 }
 
-.event_card_wrapper p {
-  margin-top: 10px;
-}
-
-.event_text_wrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.event_essentials {
-  width: 150px;
-}
-
-h1 {
-  padding-left: 20px;
-}
+/*  */
