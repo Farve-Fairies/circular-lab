@@ -1,0 +1,95 @@
+---
+// src/components/Events.astro
+import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
+
+---
+
+<section class="events">
+  <h2>Events</h2>
+  <p>
+    Følg med her i kalenderen og hold dig opdateret på, hvad der sker i Circular Lab. <br>
+    Vejledninger, foredrag, events og lignende vil løbende blive lagt ind i kalenderen.
+  </p>
+
+  <div class="event-box">
+    <div class="event-left">
+      <strong>Repair Café</strong><br />
+      9. April 2025<br />
+      14:00–16:00<br />
+    </div>
+    <div class="event-center">
+      <p>
+        Repair Café i Circular Lab hvor vi arbejder med den cirkulære forretningsmodel
+        “reparation”. <br> På denne workshop har vi fokus på lapning af tekstiler.
+      </p>
+    </div>
+    <div class="event-right">
+      <div class="event-images">
+        <img src="public/forside-billede2 1.png" alt="Billede af event" />
+        <img src="public/forside-billede2 1.png" alt="Billede af event" />
+        <img src="public/forside-billede2 1.png" alt="Billede af event" />
+      </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <GlassButton text="Se Kalender her" />   
+  </div>
+
+</section>
+
+<style>
+  .events {
+    padding: 2rem 20rem;
+  }
+
+  .events h2 {
+        font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px #FF8552;
+}
+
+  .event-box {
+    display: flex;
+    flex-wrap: nowrap; /* Forhindrer elementerne i at bryde til næste linje */
+    gap: 1rem;
+    border-top: 1px solid #ff6a00;
+    border-bottom: 1px solid #ff6a00;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    width: 100%; /* Sørger for, at boksen bruger hele containerens bredde */
+  }
+
+  .event-left {
+    flex: 1; /* Venstre kolonne */
+    font-size: 1.5rem;
+  }
+
+  .event-center {
+    flex: 2; /* Midterste kolonne */
+  }
+
+  .event-right {
+    flex: 3; /* Højre kolonne */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .event-images {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .event-images img {
+    width: 60px;
+    height: 80px;
+  }
+
+  .event-left,
+  .event-center,
+  .event-right {
+    flex-shrink: 1; /* Tillader elementerne at tilpasse sig containerens bredde */
+  }
+</style>

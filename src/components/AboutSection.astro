@@ -1,6 +1,6 @@
 ---
 // Ingen scripting nødvendig
-import Button from './GlassButton.astro'; // Importér knapkomponenten
+import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
 import PracticalInfo from './PracticalInfo.astro';
 
 
@@ -65,6 +65,7 @@ import PracticalInfo from './PracticalInfo.astro';
       text-decoration: underline;
       color: #000;
     }
+
   
 
   </style>
@@ -86,11 +87,13 @@ import PracticalInfo from './PracticalInfo.astro';
         Lab’et bruges til undervisning, workshops, arrangementer, udstillinger og eksperimenter.
         Følg med i kalenderen for at se de kommende events og happenings.
       </p>
-  
-      <!-- <Button text="Kontakt os" /> -->
-    </div>
-  <div class="about-right"> 
-    <PracticalInfo /></div>
 
+      <div class="button-container">
+        <GlassButton text="Kontakt os her" />   
+         </div>
+    </div>
+
+    <div class="about-right"> 
+      <PracticalInfo />
+    </div>
   </section>
-  

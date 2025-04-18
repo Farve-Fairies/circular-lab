@@ -1,0 +1,72 @@
+---
+const { title, content } = Astro.props;
+---
+
+<details class="accordion">
+  <summary> <img class="accordion-icon closed" src="public/Vector.png" alt="Pil lukket" />
+    <img class="accordion-icon open" src="public/streg.png" alt="Pil åben" />
+    {title}
+   
+  </summary>
+  <div class="accordion-content">
+    <slot />
+  </div>
+</details>
+
+
+
+<style>
+ .accordion {
+      padding: 1rem 20rem;
+      font-size: 1.3rem;
+
+    }
+ 
+  .accordion summary {
+    font-weight: bold;
+    padding: 1rem 0;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(255, 60, 0);
+    list-style: none;
+    transition: color 0.3s ease;
+  }
+
+  .accordion summary:hover {
+    color: rgb(255, 100, 50);
+  }
+
+  .accordion-content {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    max-height: 0;
+    opacity: 0; /* Start med at gøre teksten usynlig */
+    transform: translateY(-10px); /* Flyt teksten lidt opad */
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Tilføj smooth overgang */
+    line-height: 1.5;
+  }
+
+  .accordion-icon {
+    width: 16px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-icon.open {
+    display: none; /* Skjul det åbne billede som standard */
+  }
+
+  details[open] .accordion-icon.closed {
+    display: none; /* Skjul det lukkede billede, når accordion er åben */
+  }
+
+  details[open] .accordion-icon.open {
+    display: inline; /* Vis det åbne billede, når accordion er åben */
+  }
+
+details[open] .accordion-content {
+    max-height: 500px; /* Juster denne værdi efter behov */
+    opacity: 1; /* Gør teksten synlig */
+    transform: translateY(0); /* Flyt teksten tilbage til sin oprindelige position */
+  }
+</style>
