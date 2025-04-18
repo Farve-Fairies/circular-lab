@@ -1,17 +1,29 @@
 ---
-//@ts-nocheck
-import Layout from "../layouts/Layout.astro";
-const url = "https://cbspsmpkfjialzthyppy.supabase.co/rest/v1/events?select=*";
-const key =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNic3BzbXBrZmppYWx6dGh5cHB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjc3NzIsImV4cCI6MjA1OTg0Mzc3Mn0.uT6SjEaiJR1sSTevguX9qaKc7UK3EGLiF-_PjHwOS94";
 
-const options = {
-  headers: { apikey: key },
-};
-const data = await fetch(url, options).then((res) => res.json());
-console.log(data);
+import Hero from "../components/Hero.astro";
+import AboutSection from '../components/AboutSection.astro'
+import Events from '../components/Events.astro';
+import OffersSection from '../components/OffersSection.astro';
+import KontaktNote from '../components/KontaktNote.astro';
+import Contact from '../components/Contact.astro';
+
+
 ---
 
-<Layout title="Forside" />
-<Hero />
-<AboutSection />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Circular Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+  <Hero />
+	<AboutSection />
+  <Events />
+  <OffersSection />
+  <KontaktNote />
+  <Contact />
+
+
+  </body>
+</html>

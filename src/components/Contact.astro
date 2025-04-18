@@ -1,0 +1,48 @@
+---
+import GlassButton from './GlassButton.astro'; 
+---
+
+
+<section class="contact-grid">
+  <img src="public/storm.png" alt="Billede af Nikolaj Storm" class="contact-image" />
+  <div class="contact-text">
+    <h2>Kontakt os</h2>
+    <p>
+      Har du spørgsmål eller brug for hjælp? <br> Kontakt os via e-mail eller kom forbi labbet i åbningstiden.
+    </p>
+    <div class="button-container">
+        <a href="mailto:circular@kea.dk">
+            <GlassButton text="Send en mail" />   
+          </a>         </div>  </div>
+</section>
+
+<style>
+      .button-container a {
+  text-decoration: none; 
+}
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    align-items: center; 
+    padding: 2rem 20rem;
+  }
+
+  .contact-image {
+    width: 80%; 
+    height: auto;
+  }
+
+  .contact-text h2 {
+    font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px #FF8552;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+  }
+</style>
