@@ -39,10 +39,10 @@ const { title, content } = Astro.props;
     padding: 0.5rem 0;
     font-size: 1rem;
     max-height: 0;
-    opacity: 0; /* Start med at gøre teksten usynlig */
-    transform: translateY(-10px); /* Flyt teksten lidt opad */
+    opacity: 0; 
+    transform: translateY(-10px); 
     overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; /* Tilføj smooth overgang */
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; 
     line-height: 1.5;
   }
 
@@ -53,20 +53,20 @@ const { title, content } = Astro.props;
   }
 
   .accordion-icon.open {
-    display: none; /* Skjul det åbne billede som standard */
+    display: none; 
   }
 
   details[open] .accordion-icon.closed {
-    display: none; /* Skjul det lukkede billede, når accordion er åben */
+    display: none; 
   }
 
   details[open] .accordion-icon.open {
-    display: inline; /* Vis det åbne billede, når accordion er åben */
+    display: inline; 
   }
 
 details[open] .accordion-content {
-    max-height: 500px; /* Juster denne værdi efter behov */
-    opacity: 1; /* Gør teksten synlig */
-    transform: translateY(0); /* Flyt teksten tilbage til sin oprindelige position */
+    max-height: 500px; 
+    opacity: 1; 
+    transform: translateY(0); 
   }
 </style>

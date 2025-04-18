@@ -1,6 +1,5 @@
 ---
-// Ingen scripting nødvendig
-import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
+import GlassButton from './GlassButton.astro'; 
 ---
 
 
@@ -12,20 +11,24 @@ import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
       Har du spørgsmål eller brug for hjælp? <br> Kontakt os via e-mail eller kom forbi labbet i åbningstiden.
     </p>
     <div class="button-container">
-        <GlassButton text="Send en mail" />   
-         </div>  </div>
+        <a href="mailto:circular@kea.dk">
+            <GlassButton text="Send en mail" />   
+          </a>         </div>  </div>
 </section>
 
 <style>
+      .button-container a {
+  text-decoration: none; 
+}
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Billede til venstre (1 del), tekst til højre (2 dele) */
-    align-items: center; /* Juster indholdet lodret */
+    grid-template-columns: 1fr 2fr; 
+    align-items: center; 
     padding: 2rem 20rem;
   }
 
   .contact-image {
-    width: 80%; /* Sørg for, at billedet fylder sin kolonne */
+    width: 80%; 
     height: auto;
   }
 

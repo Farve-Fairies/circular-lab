@@ -1,7 +1,5 @@
 ---
-// src/components/Events.astro
-import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
-
+import GlassButton from './GlassButton.astro'; 
 ---
 
 <section class="events">
@@ -55,33 +53,33 @@ import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
 
   .event-box {
     display: flex;
-    flex-wrap: nowrap; /* Forhindrer elementerne i at bryde til næste linje */
+    flex-wrap: nowrap; 
     gap: 1rem;
     border-top: 1px solid #ff6a00;
     border-bottom: 1px solid #ff6a00;
     padding: 1rem 0;
     margin: 1rem 0;
-    width: 100%; /* Sørger for, at boksen bruger hele containerens bredde */
+    width: 100%; 
   }
 
   .event-left {
-    flex: 1; /* Venstre kolonne */
+    flex: 1;
     font-size: 1.5rem;
     padding-top: 0.6rem;
 
   }  
   .event-left1 {
     padding-top: 1rem;
-    flex: 1; /* Venstre kolonne */
+    flex: 1; 
     font-size: 1rem;
   }
 
   .event-center {
-    flex: 2; /* Midterste kolonne */
+    flex: 2; 
   }
 
   .event-right {
-    flex: 3; /* Højre kolonne */
+    flex: 3; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -100,6 +98,6 @@ import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
   .event-left,
   .event-center,
   .event-right {
-    flex-shrink: 1; /* Tillader elementerne at tilpasse sig containerens bredde */
+    flex-shrink: 1; 
   }
 </style>

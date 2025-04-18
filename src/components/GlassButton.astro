@@ -1,5 +1,4 @@
 ---
-// filepath: /Users/emmamunch/Desktop/kea/circularlab/circular-lab/src/components/GlassButton.astro
 export interface Props {
   text: string;
 }
@@ -15,7 +14,6 @@ const { text = "Kontakt os her" } = Astro.props;
 </div>
 
       <style>
-        /* Defs */
 @property --angle-1 {
   syntax: "<angle>";
   inherits: false;
@@ -37,9 +35,6 @@ const { text = "Kontakt os her" } = Astro.props;
 
 
 /* ========== BUTTON ========== */
-
-
-
 
 /* Shadow */
 .button-shadow::after {
@@ -122,7 +117,7 @@ button span::after {
   display: block;
   position: absolute;
   z-index: 1;
-  width: calc(100% - var(--border-width)); /* Prevent overlapping border */
+  width: calc(100% - var(--border-width)); 
   height: calc(100% - var(--border-width));
   top: calc(0% + var(--border-width) / 2);
   left: calc(0% + var(--border-width) / 2);

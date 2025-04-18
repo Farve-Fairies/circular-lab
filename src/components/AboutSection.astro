@@ -1,9 +1,6 @@
 ---
-// Ingen scripting nødvendig
-import GlassButton from './GlassButton.astro'; // Importér knapkomponenten
+import GlassButton from './GlassButton.astro'; 
 import PracticalInfo from './PracticalInfo.astro';
-
-
 ---
 
 <style>
@@ -93,6 +90,10 @@ right: 422px;
     top: 50px;
     right: 220px;
   }
+
+  .button-container a {
+  text-decoration: none; 
+}
   </style>
   
   <section class="about-section">
@@ -116,7 +117,10 @@ right: 422px;
       </p>
 
       <div class="button-container">
+      <a href="mailto:circular@kea.dk">
         <GlassButton text="Kontakt os her" />   
+      </a>
+
          </div>
     </div>
 
