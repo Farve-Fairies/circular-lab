@@ -1,0 +1,104 @@
+---
+const materials = [
+  { img: "/materials/green.png" },
+  { img: "/materials/yellow-grid.png" },
+  { img: "/materials/wood-grid.png" },
+  { img: "/materials/black-white.png" },
+  { img: "/materials/lavender-veins.png" },
+  { img: "/materials/green-fragments.png" },
+  { img: "/materials/pattern-beige.png" },
+  { img: "/materials/grey-bubbles.png" },
+  { img: "/materials/wrinkled-brown.png" },
+  { img: "/materials/blue-fiber.png" },
+];
+---
+<style>
+
+html {
+    background: #f2f2f2;
+
+}
+  .hero {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .title-img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+}
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .card {
+    background: #e6e6e6;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    height: 80%;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  .material-img {
+    width: 80%;
+    height: 60%;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-info {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .qr {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+</style>
+
+<section class="hero">
+  <img src="public/ti.png" alt="Circular Lab" class="title-img" />
+  <div class="grid">
+    {materials.map((material) => (
+      <div class="card">
+        <div class="dot"></div>
+        <img src="public/forside-billede2 1.png" alt="material" class="material-img" />
+        <div class="card-info">
+          <span>0603 – 01</span>
+          <span>Material Connection</span>
+        </div>
+        <img src="public/qr.png" alt="QR code" class="qr" />
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,96 @@
+---
+// Ingen scripting nødvendig
+import Button from './GlassButton.astro'; // Importér knapkomponenten
+import PracticalInfo from './PracticalInfo.astro';
+
+
+---
+
+<style>
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 20rem;
+      background-color: #f2f2f2;
+      gap: 2rem;
+    }
+  
+    .about-left {
+      flex: 1 1 60%;
+      max-width: 700px;
+    }
+  
+    .about-left h2 {
+        font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px #FF8552;
+}
+
+  
+    .about-left p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+  
+    .about-left p strong {
+      font-weight: 700;
+    }
+  
+    .about-left a {
+      text-decoration: underline;
+      color: #000;
+    }
+  
+    .about-right {
+      flex: 1 1 30%;
+    
+    }
+  
+    .about-right h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    .about-right p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  
+    .about-right a {
+      text-decoration: underline;
+      color: #000;
+    }
+  
+
+  </style>
+  
+  <section class="about-section">
+    <div class="about-left">
+      <h2>Circular Lab</h2>
+      <p>
+        <strong>er et community lab</strong> med fokus på cirkulære forretningsmodeller, strategier og design.
+        Circular Lab er for <strong>KEAs studerende</strong>, undervisere og medlemmer af samarbejdende institutioner.
+        Circular Lab samarbejder på tværs af de andre labs på KEA.
+      </p>
+      <p>
+        Circular Lab er et multifunktionelt rum, der indbyder til at udforske og undersøge nye cirkulære
+        forretningsmodeller og hvordan vi designer cirkulære produkter. Gennem <strong>workshops, foredrag, community caféer og virksomhedsbesøg</strong>
+        åbner vi op for mulighederne der følger med den cirkulære omstilling og hvordan man kan udforske dem igennem praksis og teori.
+      </p>
+      <p>
+        Lab’et bruges til undervisning, workshops, arrangementer, udstillinger og eksperimenter.
+        Følg med i kalenderen for at se de kommende events og happenings.
+      </p>
+  
+      <!-- <Button text="Kontakt os" /> -->
+    </div>
+  <div class="about-right"> 
+    <PracticalInfo /></div>
+
+  </section>
+  

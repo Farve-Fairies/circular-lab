@@ -1,0 +1,56 @@
+---
+// PracticalInfo.astro
+---
+<div class="button-wrap">
+    <div class="praktisk-indhold">
+      <h3>Praktisk</h3>
+      <p>
+        <strong>Åbningstider</strong><br />
+        Circular Lab er åbent mandag til fredag 8.30 – 22.00<br />
+        Du er velkommen til at benytte lokalet i åbningstiden, så længe der ikke foregår undervisning, workshops eller andet.
+        (<a href="#">Tjek vores kalender for at se kommende events</a>).
+      </p>
+      <p>
+        Åbningstider for vejledning med Lab Manager: <a href="#">Se kalender</a>.
+      </p>
+      <p>
+        <strong>Adgang til labbet</strong><br />
+        Labbet er placeret på Guldbergsgade 29N, Lokale A129.
+      </p>
+      <p>
+        <strong>Kontakt</strong><br />
+        E: <a href="mailto:circular@kea.dk">circular@kea.dk</a>
+      </p>
+    </div>
+    <div class="button-shadow"></div>
+  </div>
+  <style>
+    .praktisk-indhold {
+  background: linear-gradient(-75deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+  border-radius: 2em;
+  padding: 2em;
+  max-width: 30rem;
+  backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+  box-shadow:
+    inset 0 0.125em 0.125em rgba(0, 0, 0, 0.05),
+    inset 0 -0.125em 0.125em rgba(255, 255, 255, 0.5),
+    0 0.25em 0.125em -0.125em rgba(0, 0, 0, 0.2),
+    0 0 0.1em 0.25em inset rgba(255, 255, 255, 0.2);
+  color: #333;
+  font-size: 1rem;
+  pointer-events: auto;
+  z-index: 3;
+  position: relative;
+}
+
+.praktisk-indhold a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.praktisk-indhold h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+  </style>
