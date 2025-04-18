@@ -14,40 +14,59 @@ console.log(data);
 
 <Layout title="Events">
   <div class="title">
-    <img src="../../public/imgs_circular_lab/titler/events-title.png" alt="" />
+    <img
+      width="923px"
+      height="337px"
+      src="../../public/imgs_circular_lab/titler/events-title-2.png"
+      alt=""
+    />
   </div>
   <h1>2025</h1>
-  <div class="vl"></div>
+
   {
     data.map((event) => (
       <article class="event_card">
+        <div class="vl" />
         <div class="event_card_wrapper">
           <div>
             <div class="event_text_wrapper">
-              <div>
-                <div class="event_essentials">
-                  <h2>{event.event_title}</h2>
-                  <p>{event.event_date}</p>
-                </div>
+              <div class="event_essentials">
+                <h2>{event.event_title}</h2>
+                <p>
+                  <input id="MyDate" type="date" value={event.event_date} />
+                </p>
+
                 <p>
                   {event.event_start} - {event.event_end}
                 </p>
               </div>
               <div class="event_description">
                 <p>{event.event_description}</p>
-                <a href={`/events/${event.event_slug}`}>Læs mere</a>
+
+                <a href={`/events/${event.event_slug}`}>
+                  <div class="arrow_container">
+                    Læs mere
+                    <img
+                      width="
+                      35px"
+                      height="19px"
+                      src="../../public/imgs_circular_lab/arrow_button.svg"
+                      alt=""
+                    />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
 
           <img
-            width="1373"
-            height="2153"
+            class="event_card_img"
+            width="241px"
+            height="197px"
             src={`/imgs_circular_lab/${event.event_img01}`}
             alt=""
           />
         </div>
-        <div class="vl" />
       </article>
     ))
   }
