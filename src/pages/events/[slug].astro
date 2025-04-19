@@ -65,7 +65,8 @@ const { event } = Astro.props;
       <p class="text-string">{event.event_description04}</p>
       <p class="text-string">{event.event_description05}</p>
       <p class="text-string">{event.event_description06}</p>
-      <ArrowButton text="Tilmeld" />
+
+      <ArrowButton url={event.extern_link} text="Tilmeld" />
 
       <p class="bold-p">Lokation:</p>
       <p>{event.event_location}</p>
