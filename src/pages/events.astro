@@ -1,10 +1,18 @@
 ---
 //@ts-nocheck
 import Layout from "../layouts/Layout.astro";
+import ArrowButton from "/src/components/ArrowButton.astro";
 const url = "https://cbspsmpkfjialzthyppy.supabase.co/rest/v1/events?select=*";
 const key =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNic3BzbXBrZmppYWx6dGh5cHB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjc3NzIsImV4cCI6MjA1OTg0Mzc3Mn0.uT6SjEaiJR1sSTevguX9qaKc7UK3EGLiF-_PjHwOS94";
 
+const formatTime = (time) => time.slice(0, 5);
+const formatDate = (date) => {
+  const options = { day: "numeric", month: "long", year: "numeric" };
+  return new Intl.DateTimeFormat("da-DK", options)
+    .format(new Date(date))
+    .toLowerCase();
+};
 const options = {
   headers: { apikey: key },
 };
@@ -21,7 +29,7 @@ console.log(data);
       alt=""
     />
   </div>
-  <h1>2025</h1>
+  <h1 class="padding-left">2025</h1>
 
   {
     data.map((event) => (
@@ -30,18 +38,24 @@ console.log(data);
         <div class="event_card_wrapper">
           <div>
             <div class="event_text_wrapper">
-              <div class="event_essentials">
-                <h2>{event.event_title}</h2>
-                <p>
-                  <input id="MyDate" type="date" value={event.event_date} />
-                </p>
+              <div class="event_display">
+                <img
+                  class="event_display_img"
+                  src={`/imgs_circular_lab/${event.event_img01}`}
+                  alt=""
+                />
+                <div class="event_essentials">
+                  <h2>{event.event_title}</h2>
 
-                <p>
-                  {event.event_start} - {event.event_end}
-                </p>
+                  <p>{formatDate(event.event_date)}</p>
+                  <p>
+                    {formatTime(event.event_start)} -
+                    {formatTime(event.event_end)}
+                  </p>
+                </div>
               </div>
               <div class="event_description">
-                <p>{event.event_description}</p>
+                <p>{event.event_description01}</p>
 
                 <a href={`/events/${event.event_slug}`}>
                   <div class="arrow_container">
@@ -58,14 +72,15 @@ console.log(data);
               </div>
             </div>
           </div>
-
-          <img
-            class="event_card_img"
-            width="241px"
-            height="197px"
-            src={`/imgs_circular_lab/${event.event_img01}`}
-            alt=""
-          />
+          <div class="event_img_container">
+            <img
+              class="event_card_img"
+              width="1041px"
+              height="752px"
+              src={`/imgs_circular_lab/${event.event_img02}`}
+              alt=""
+            />
+          </div>
         </div>
       </article>
     ))

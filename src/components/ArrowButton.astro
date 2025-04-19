@@ -1,0 +1,40 @@
+---
+const { text } = Astro.props;
+---
+
+<a href="">
+  <div class="arrow_wrapper">
+    {text}
+    <img
+      width="
+      35px"
+      height="19px"
+      src="../../public/imgs_circular_lab/arrow_button.svg"
+      alt=""
+    />
+  </div>
+</a>
+
+<style>
+  .arrow_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px 10px 0px;
+  }
+  img {
+    margin-top: -4px;
+  }
+
+  a {
+    font-family: "Helvetica LT STD Condensed";
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 10pt;
+    color: #4a4a4a;
+  }
+
+  a:hover {
+    filter: sepia(100) saturate(100) hue-rotate(55deg) brightness(2);
+  }
+</style>
