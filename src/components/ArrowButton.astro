@@ -1,8 +1,9 @@
 ---
 const { text } = Astro.props;
+const { url } = Astro.props;
 ---
 
-<a href="">
+<a href={url}>
   <div class="arrow_wrapper">
     {text}
     <img

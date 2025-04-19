@@ -59,13 +59,9 @@ console.log(data);
 
                 <a href={`/events/${event.event_slug}`}>
                   <div class="arrow_container">
-                    Læs mere
-                    <img
-                      width="
-                      35px"
-                      height="19px"
-                      src="../../public/imgs_circular_lab/arrow_button.svg"
-                      alt=""
+                    <ArrowButton
+                      url={`/events/${event.event_slug}`}
+                      text="Læs mere"
                     />
                   </div>
                 </a>
