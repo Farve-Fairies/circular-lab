@@ -1,6 +1,9 @@
 ---
 //@ts-nocheck
 import Layout from "/src/layouts/Layout.astro";
+import ArrowButton from "/src/components/ArrowButton.astro";
+import Titel from "/src/components/Titel.astro";
+import GlassButton from "../../components/GlassButton.astro";
 export async function getStaticPaths() {
   const url =
     "https://cbspsmpkfjialzthyppy.supabase.co/rest/v1/events?select=*";
@@ -20,10 +23,69 @@ export async function getStaticPaths() {
     };
   });
 }
+const formatTime = (time) => time.slice(0, 5);
+const formatDate = (date) => {
+  const options = { day: "numeric", month: "long", year: "numeric" };
+  return new Intl.DateTimeFormat("da-DK", options)
+    .format(new Date(date))
+    .toLowerCase();
+};
 
 const { event } = Astro.props;
 ---
 
 <Layout title={event.event_title}>
   <h1>{event.event_title}</h1>
+  <div class="grid_5-4_container">
+    <div>
+      <div class="border">
+        <div class="grid_1-1_container">
+          <div>
+            <div class="flex">
+              <p class="bold-p">Dato:</p>
+              <p>{formatDate(event.event_date)}</p>
+            </div>
+            <div class="flex">
+              <p class="bold-p">Tidspunkt:</p>
+              <p>
+                {formatTime(event.event_start)} -
+                {formatTime(event.event_end)}
+              </p>
+            </div>
+          </div>
+          <div class="button_wrapper">
+            <GlassButton text="Gem til kalender" />
+          </div>
+        </div>
+      </div>
+
+      <h2>Om {event.event_title}</h2>
+      <p class="text-string">{event.event_description02}</p>
+      <p class="text-string">{event.event_description03}</p>
+      <p class="text-string">{event.event_description04}</p>
+      <p class="text-string">{event.event_description05}</p>
+      <p class="text-string">{event.event_description06}</p>
+      <ArrowButton text="Tilmeld" />
+
+      <p class="bold-p">Lokation:</p>
+      <p>{event.event_location}</p>
+    </div>
+
+    <div>
+      <img
+        class="event_card_img"
+        width="1041px"
+        height="752px"
+        src={`/imgs_circular_lab/${event.event_img02}`}
+        alt=""
+      />
+      <img
+        class="event_card_img"
+        width="1041px"
+        height="752px"
+        src={`/imgs_circular_lab/${event.event_img03}`}
+        alt=""
+      />
+    </div>
+  </div>
 </Layout>

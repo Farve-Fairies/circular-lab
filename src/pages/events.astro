@@ -1,6 +1,7 @@
 ---
 //@ts-nocheck
 import Layout from "../layouts/Layout.astro";
+import ArrowButton from "/src/components/ArrowButton.astro";
 const url = "https://cbspsmpkfjialzthyppy.supabase.co/rest/v1/events?select=*";
 const key =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNic3BzbXBrZmppYWx6dGh5cHB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjc3NzIsImV4cCI6MjA1OTg0Mzc3Mn0.uT6SjEaiJR1sSTevguX9qaKc7UK3EGLiF-_PjHwOS94";
@@ -28,7 +29,7 @@ console.log(data);
       alt=""
     />
   </div>
-  <h1>2025</h1>
+  <h1 class="padding-left">2025</h1>
 
   {
     data.map((event) => (
@@ -54,7 +55,7 @@ console.log(data);
                 </div>
               </div>
               <div class="event_description">
-                <p>{event.event_description}</p>
+                <p>{event.event_description01}</p>
 
                 <a href={`/events/${event.event_slug}`}>
                   <div class="arrow_container">
