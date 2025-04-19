@@ -1,5 +1,8 @@
 ---
 const { title } = Astro.props;
+const { page } = Astro.props;
+const { previous } = Astro.props;
+const { previousURL } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,6 +17,13 @@ const { title } = Astro.props;
   <body>
     <header>
       <img src="../../public/imgs_circular_lab/header.png" alt="" />
+      <div class="menu">
+        <a href="#">Forside</a> / <a href="#">Labs</a> / <a href="#"
+          >Circular Labs</a
+        >
+        / <a href="/">Circular Lab</a> / <a href={previousURL}>{previous}</a> /
+        <a href="#">{page}</a>
+      </div>
     </header>
     <main>
       <slot />
@@ -36,5 +46,13 @@ const { title } = Astro.props;
   main {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: start;
+    align-items: baseline;
   }
 </style>

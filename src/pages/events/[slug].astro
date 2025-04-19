@@ -34,7 +34,12 @@ const formatDate = (date) => {
 const { event } = Astro.props;
 ---
 
-<Layout title={event.event_title}>
+<Layout
+  title={event.event_title}
+  page={event.event_title}
+  previous="Events"
+  previousURL="/events"
+>
   <h1>{event.event_title}</h1>
   <div class="grid_5-4_container">
     <div>
