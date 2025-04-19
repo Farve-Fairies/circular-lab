@@ -12,10 +12,16 @@ const { title } = Astro.props;
     <title>Circular Lab - {title}</title>
   </head>
   <body>
+    <header>
+      <img src="../../public/imgs_circular_lab/header.png" alt="" />
+    </header>
     <main>
       <slot />
     </main>
   </body>
+  <footer>
+    <img src="../../public/imgs_circular_lab/footer.png" alt="" />
+  </footer>
 </html>
 
 <style>
