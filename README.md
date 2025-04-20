@@ -65,3 +65,44 @@ Konklusion
 
 Projektet demonstrerer en moderne frontend-løsning bygget med Astro og Supabase, med vægt på komponentstruktur, dynamisk dataintegration og designorienteret formidling. Resultatet er en præsentationsside, som understøtter Circular Labs identitet og samtidig gør brug af tidssvarende teknologier.
 
+Forkortet/nøgleord:
+Teknisk Dokumentation – Circular Lab
+
+Framework: Astro – moderne, komponentbaseret frontend-framework til statiske/dynamiske websites. Fokus på struktur, æstetik, og integration af eksterne data. Responsivt design, men mobiloptimering ikke primært fokus.
+Projektstruktur:
+
+/components: Genanvendelige komponenter (layout, tekstkort, CTA-knapper, dynamiske visninger).
+/layouts: Layout-komponenter, der definerer HTML-skelettet.
+/pages: Sider som .astro-filer, med import af relevante komponenter.
+/public: Billeder, favicon, statiske assets.
+/styles: Eksterne CSS-filer til global og komponentstyling.
+Astro Flexibilitet: Brug af både JSX-lignende komponentstruktur og ren HTML.
+
+Typografi og Design:
+
+Skrifttype: Helvetica – understøtter æstetik og professionalisme.
+Design: Minimalistisk, tekstbaseret med høj kontrast og struktureret grid.
+Farvepalette: Nedtonet, sort, grå, med accenter i orange og blå.
+Komponenter og Struktur:
+
+Header.astro, Footer.astro: Kontinuitet og genkendelighed fra KEAs designskabelon.
+Events.astro: Dynamisk side med Supabase-data (kommende events).
+PracticalInfo.astro: Kontaktinfo og åbningstider.
+Accordion.astro: Sammenfoldeligt format til ydelser.
+Hero.astro: Dynamisk billeder, indlæst fra Supabase.
+GlassButton.astro: CTA-knap ("Kontakt os her"), kodet med CodePen.
+Dynamisk Indhold via Supabase:
+
+Supabase: Database og backend-løsning, data hentet dynamisk via fetch i .astro-filer.
+Anvendelse: Kalender med kommende events (billeder, datoer, tekst).
+Opdatering: Data opdateres via Supabase UI uden deploy af kode.
+Responsivitet og Platforms Fokus:
+
+Responsivitet: Fungerer på både mobil og desktop. Fokus på visuelt univers, der matcher Circular Labs Instagram-udtryk.
+Funktionalitet:
+
+Ingen filtrering eller avanceret interaktion: Fokus på enkel og elegant visning af data, let vedligeholdelse.
+Konklusion:
+
+Frontend-løsning: Bygget med Astro og Supabase, med vægt på komponentstruktur, dynamisk dataintegration og designorienteret formidling.
+Resultat: Præsentationsside, der understøtter Circular Labs identitet med tidssvarende teknologier.
