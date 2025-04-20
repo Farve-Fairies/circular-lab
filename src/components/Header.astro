@@ -1,0 +1,187 @@
+---
+
+---
+
+<style>
+  :root,
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .kea-header {
+    margin: 0;
+    padding: 0;
+  }
+
+  header.kea-header {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
+  .kea-header__topbar,
+  .kea-header__main {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Topbar */
+  .kea-header__topbar {
+    background-color: #d1d8df;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 15px;
+    padding: 0.5em 1em;
+    font-weight: 700;
+    color: #1c2a39;
+    line-height: 1.6;
+  }
+
+  .kea-header__site-title {
+    text-transform: uppercase;
+  }
+
+  .kea-header__topnav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #1c2a39;
+  }
+
+  .kea-header__topnav a:hover {
+    color: #e12619;
+  }
+
+  .kea-header__kea-dk {
+    color: #e12619;
+    font-weight: bold;
+  }
+
+  /* Main nav */
+  .kea-header__main {
+    display: flex;
+    align-items: stretch;
+    background-color: #1c2a39;
+    margin: 0;
+    padding: 0;
+  }
+
+  .kea-header__logo {
+    background-color: #e24e42;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+  }
+
+  .kea-header__logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  .kea-header__nav {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0 2rem;
+    gap: 2rem;
+    flex-grow: 1;
+  }
+
+  .kea-header__nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .kea-header__nav a:hover {
+    color: #e12619;
+  }
+
+  .kea-header__tools {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .kea-header__lang,
+  .kea-header__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  .kea-header__lang {
+    background: white;
+    color: #e12619;
+  }
+
+  .kea-header__search {
+    background: #e24e42;
+    color: white;
+    font-size: 1.2em;
+  }
+
+  .kea-header__search:hover {
+    background: #c93d33;
+  }
+</style>
+
+<header class="kea-header">
+  <!-- Topbar -->
+  <div class="kea-header__topbar">
+    <div class="kea-header__site-title">
+      MITKEA - INTRANET FOR KEA-STUDERENDE
+    </div>
+    <nav class="kea-header__topnav">
+      <a href="/find-din-uddannelse">Find din uddannelse</a>
+      <a
+        href="https://kea.topdesk.net/tas/public/ssp/"
+        target="_blank"
+        rel="noopener">Serviceportal</a
+      >
+      <a
+        href="https://kea-fronter.itslearning.com/"
+        target="_blank"
+        rel="noopener">Itslearning</a
+      >
+      <a href="https://bibliotek.kea.dk/" target="_blank" rel="noopener"
+        >Bibliotek</a
+      >
+      <a href="https://kea.dk/" target="_blank" class="kea-header__kea-dk"
+        >KEA.DK</a
+      >
+    </nav>
+  </div>
+
+  <!-- Main navigation -->
+  <div class="kea-header__main">
+    <div class="kea-header__logo">
+      <a href="/" aria-label="KEA logo">
+        <img src="/logo-main-black-single.png" alt="KEA logo" />
+      </a>
+    </div>
+    <nav class="kea-header__nav">
+      <a href="/studiehandbog">Studiehåndbog</a>
+      <a href="/vejledning-og-stotte">Vejledning og støtte</a>
+      <a href="/praktik">Praktik</a>
+      <a href="/internationale-muligheder">Internationale muligheder</a>
+      <a href="/studieliv-og-faciliteter">Studieliv og Faciliteter</a>
+    </nav>
+    <div class="kea-header__tools">
+      <a href="/en/" class="kea-header__lang">EN</a>
+      <a href="#search" class="kea-header__search" aria-label="Søg">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+  </div>
+</header>
