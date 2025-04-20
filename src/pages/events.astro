@@ -22,64 +22,68 @@ console.log(data);
 ---
 
 <Layout title="Events" page="Events" previous="Forside" previousURL="/">
-  <div class="title">
-    <img
-      width="923px"
-      height="337px"
-      src="../../public/imgs_circular_lab/titler/events-title-2.png"
-      alt=""
-    />
-  </div>
-  <h1 class="padding-left">2025</h1>
+  <div class="content">
+    <div class="title">
+      <img
+        width="923px"
+        height="337px"
+        src="/imgs_circular_lab/titler/events-title-2.png"
+        alt=""
+      />
+    </div>
+    <h1 class="padding-left">2025</h1>
 
-  {
-    data.map((event) => (
-      <article class="event_card">
-        <div class="vl" />
-        <div class="event_card_wrapper">
-          <div>
-            <div class="event_text_wrapper">
-              <div class="event_display">
-                <img
-                  class="event_display_img"
-                  src={`/imgs_circular_lab/${event.event_img01}`}
-                  alt=""
-                />
-                <div class="event_essentials">
-                  <h2>{event.event_title}</h2>
+    {
+      data.map((event) => (
+        <div class="content">
+          <article class="event_card">
+            <div class="vl" />
+            <div class="event_card_wrapper">
+              <div>
+                <div class="event_text_wrapper">
+                  <div class="event_display">
+                    <img
+                      class="event_display_img"
+                      src={`/imgs_circular_lab/${event.event_img01}`}
+                      alt=""
+                    />
+                    <div class="event_essentials">
+                      <h2>{event.event_title}</h2>
 
-                  <p>{formatDate(event.event_date)}</p>
-                  <p>
-                    {formatTime(event.event_start)} -
-                    {formatTime(event.event_end)}
-                  </p>
+                      <p>{formatDate(event.event_date)}</p>
+                      <p>
+                        {formatTime(event.event_start)} -
+                        {formatTime(event.event_end)}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="event_description">
+                    <p>{event.event_description01}</p>
+
+                    <a href={`/events/${event.event_slug}`}>
+                      <div class="arrow_container">
+                        <ArrowButton
+                          url={`/events/${event.event_slug}`}
+                          text="Læs mere"
+                        />
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="event_description">
-                <p>{event.event_description01}</p>
-
-                <a href={`/events/${event.event_slug}`}>
-                  <div class="arrow_container">
-                    <ArrowButton
-                      url={`/events/${event.event_slug}`}
-                      text="Læs mere"
-                    />
-                  </div>
-                </a>
+              <div class="event_img_container">
+                <img
+                  class="event_card_img"
+                  width="1041px"
+                  height="752px"
+                  src={`/imgs_circular_lab/${event.event_img02}`}
+                  alt=""
+                />
               </div>
             </div>
-          </div>
-          <div class="event_img_container">
-            <img
-              class="event_card_img"
-              width="1041px"
-              height="752px"
-              src={`/imgs_circular_lab/${event.event_img02}`}
-              alt=""
-            />
-          </div>
+          </article>
         </div>
-      </article>
-    ))
-  }
+      ))
+    }
+  </div>
 </Layout>

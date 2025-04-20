@@ -98,7 +98,7 @@ a {
 
 /* PROGRAMSIDE  CSS */
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .title {
     padding-right: 20px;
   }
@@ -109,6 +109,7 @@ a {
   .event_card {
     padding-left: 20px;
     padding-right: 20px;
+    transition: all 0.5s ease-in-out;
   }
 
   .event_description {
@@ -148,13 +149,14 @@ a {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   /*  */
   /* DESKTOP */
   /*  */
 
   .event_card {
     padding-left: 40px;
+
     transition: all 0.5s ease-in-out;
   }
 
@@ -162,7 +164,7 @@ a {
     border-radius: 10px;
   }
   .event_card:hover {
-    transform: scale(1.1) translate(50px);
+    transform: translate(50px);
 
     transition: all 0.5s ease-in-out;
     filter: saturation(1.2);
@@ -171,12 +173,12 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 20px 20px 0px;
+    gap: 20px;
   }
 
   .event_text_wrapper {
     display: flex;
-    align-items: self-start;
-    gap: 20px;
+    align-items: start;
   }
 
   .arrow_container {
@@ -185,7 +187,7 @@ a {
     top: 80px;
     left: -9px;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     gap: 10px;
     margin: 0 auto;
   }
