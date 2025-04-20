@@ -19,6 +19,8 @@ const { title, content } = Astro.props;
  .accordion {
       padding: 1rem 20rem;
       font-size: 1.3rem;
+      font-family: "Helvetica";
+
 
     }
  
@@ -29,6 +31,8 @@ const { title, content } = Astro.props;
     border-bottom: 1px solid rgb(255, 60, 0);
     list-style: none;
     transition: color 0.3s ease;
+    font-family: "Helvetica";
+
   }
 
   .accordion summary:hover {
@@ -69,4 +73,24 @@ details[open] .accordion-content {
     opacity: 1; 
     transform: translateY(0); 
   }
+  @media (max-width: 768px) {
+  .accordion {
+    padding: 1rem; /* Reducer padding på mobil */
+    font-size: 1rem; /* Reducer tekststørrelsen */
+  }
+
+  .accordion summary {
+    font-size: 1rem; /* Reducer overskriftens størrelse */
+    padding: 0.8rem 0; /* Mindre padding for overskriften */
+  }
+
+  .accordion-content {
+    font-size: 0.9rem; /* Reducer tekststørrelsen for indhold */
+    line-height: 1.4; /* Juster linjehøjden */
+  }
+
+  .accordion-icon {
+    width: 14px; /* Gør ikonet mindre på mobil */
+  }
+}
 </style>

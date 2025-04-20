@@ -41,16 +41,41 @@
   pointer-events: auto;
   z-index: 3;
   position: relative;
+  font-family: "Helvetica";
+
 }
 
 .praktisk-indhold a {
   color: #333;
   text-decoration: underline;
+  font-family: "Helvetica";
+
 }
 
 .praktisk-indhold h3 {
   font-size: 1.5rem;
   margin-top: 0;
-}
+  font-family: "Helvetica";
 
+}
+@media (max-width: 768px) {
+  .praktisk-indhold {
+    padding: 1.5em; 
+    max-width: 100%; 
+    border-radius: 1em; 
+  }
+
+  .praktisk-indhold h3 {
+    font-size: 1.2rem; 
+  }
+
+  .praktisk-indhold p {
+    font-size: 0.9rem; 
+    line-height: 1.5;
+  }
+
+  .praktisk-indhold a {
+    font-size: 0.9rem; 
+  }
+}
   </style>

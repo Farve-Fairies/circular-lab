@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:20250409T140000Z
+DTEND:20250409T160000Z
+SUMMARY:Repair Café
+DESCRIPTION:Repair Café i Circular Lab hvor vi arbejder med den cirkulære forretningsmodel “reparation”.
+LOCATION:Circular Lab
+END:VEVENT
+END:VCALENDAR

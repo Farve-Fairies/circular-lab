@@ -10,12 +10,22 @@ import GlassButton from './GlassButton.astro';
   </p>
 
   <div class="event-box">
+    <a href="/events">
+
     <div class="event-left">
       <strong>Repair Café</strong><br />
       <div class="event-left1">
 
       9. April 2025<br />
-      14:00–16:00<br />
+      14:00–16:00<br /> <br>
+      <div class="date">
+        <a href="/date.ics" download>
+          <strong>Gem dato<br /></strong>
+        </a>
+      </div>
+
+
+    </a>
     </div>    </div>
 
     <div class="event-center">
@@ -26,29 +36,39 @@ import GlassButton from './GlassButton.astro';
     </div>
     <div class="event-right">
       <div class="event-images">
-        <img src="public/forside-billede2 1.png" alt="Billede af event" />
-        <img src="public/forside-billede2 1.png" alt="Billede af event" />
-        <img src="public/forside-billede2 1.png" alt="Billede af event" />
+        <img src="public/imgs_circular_lab/materialer/material-01.webp" alt="Billede af event" />
+        <img src="public/imgs_circular_lab/materialer/material-02.webp" alt="Billede af event" />
+        <img src="public/imgs_circular_lab/materialer/material-08.webp" alt="Billede af event" />
       </div>
     </div>
+    
   </div>
   <div class="button-container">
-    <GlassButton text="Se Kalender her" />   
-  </div>
+    <a href="/events">
+      <GlassButton text="Se Kalender her" />
+    </a>  </div>
 
 </section>
-
+<script>
+  
+</script>
 <style>
   .events {
     padding: 2rem 20rem;
   }
 
+  a {
+    text-decoration: none; 
+    color: black;
+  }
+
   .events h2 {
-        font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 2px #FF8552;
+    font-family: "Helvetica";
+  font-weight: bolder;
+  font-size: 30pt;
+  -webkit-text-stroke: 1px #ff671f;
+  text-shadow: #ff905991 0px 4px 11px;
+  color: #ededed;
 }
 
   .event-box {
@@ -60,18 +80,24 @@ import GlassButton from './GlassButton.astro';
     padding: 1rem 0;
     margin: 1rem 0;
     width: 100%; 
+    color: black;
+
   }
 
   .event-left {
     flex: 1;
     font-size: 1.5rem;
     padding-top: 0.6rem;
+    color: black;
 
   }  
   .event-left1 {
     padding-top: 1rem;
     flex: 1; 
     font-size: 1rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
   }
 
   .event-center {
@@ -99,5 +125,41 @@ import GlassButton from './GlassButton.astro';
   .event-center,
   .event-right {
     flex-shrink: 1; 
+    color: black;
   }
+  @media (max-width: 768px) {
+  .events {
+    padding: 1rem; /* Reducer padding på mobil */
+  }
+
+  .event-box {
+    flex-direction: column; /* Skift til kolonne-layout */
+    gap: 1rem;
+  }
+
+  .event-left {
+    font-size: 1.2rem; /* Reducer tekststørrelsen */
+    text-align: center; /* Centrer teksten */
+  }
+
+  .event-left1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .event-center {
+    text-align: center; /* Centrer teksten */
+    font-size: 0.9rem;
+  }
+
+  .event-right {
+    justify-content: center; /* Centrer billederne */
+    margin-top: 1rem;
+  }
+
+  .event-images img {
+    width: 80px; /* Gør billederne større på mobil */
+    height: auto;
+  }
+}
 </style>
