@@ -1,21 +1,22 @@
 ---
 const materials = [
-  { img: "/materials/green.png" },
-  { img: "/materials/yellow-grid.png" },
-  { img: "/materials/wood-grid.png" },
-  { img: "/materials/black-white.png" },
-  { img: "/materials/lavender-veins.png" },
-  { img: "/materials/green-fragments.png" },
-  { img: "/materials/pattern-beige.png" },
-  { img: "/materials/grey-bubbles.png" },
-  { img: "/materials/wrinkled-brown.png" },
-  { img: "/materials/blue-fiber.png" },
+  { img: "public/imgs_circular_lab/materialer/material-01.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-02.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-03.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-10.webp" },
+
+  { img: "public/imgs_circular_lab/materialer/material-04.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-05.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-06.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-07.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-08.webp" },
+  { img: "public/imgs_circular_lab/materialer/material-09.webp" },
 ];
 ---
 <style>
 
 html {
-    background: #f2f2f2;
+  background-color: #ededed;
 
 }
   .hero {
@@ -49,6 +50,8 @@ html {
     position: relative;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     height: 70%;
+    font-family: "Helvetica";
+
   }
 
   .dot {
@@ -76,6 +79,8 @@ html {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    font-family: "Helvetica";
+
   }
 
   .qr {
@@ -84,6 +89,36 @@ html {
     object-fit: contain;
     margin: 0 auto;
   }
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero {
+    padding: 2rem 1rem; 
+  }
+  .title-img {
+    max-width: 300px;
+  }
+
+  .grid {
+    gap: 1.5rem; 
+  }
+
+  .card {
+    padding: 1rem; 
+  }
+
+  .card-info {
+    font-size: 0.7rem; 
+  }
+
+  .qr {
+    width: 20px; 
+    height: 20px;
+  }
+}
 </style>
 
 <section class="hero">
@@ -92,7 +127,7 @@ html {
     {materials.map((material) => (
       <div class="card">
         <div class="dot"></div>
-        <img src="public/forside-billede2 1.png" alt="material" class="material-img" />
+        <img src={material.img} alt="Material" class="material-img" />
         <div class="card-info">
           <span>0603 – 01</span>
           <span>Material Connection</span>

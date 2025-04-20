@@ -33,16 +33,44 @@ import GlassButton from './GlassButton.astro';
   }
 
   .contact-text h2 {
-    font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 2px #FF8552;
+    font-family: "Helvetica";
+  font-weight: bolder;
+  font-size: 30pt;
+  -webkit-text-stroke: 1px #ff671f;
+  text-shadow: #ff905991 0px 4px 11px;
+  color: #ededed;
   }
 
   .contact-text p {
     font-size: 1rem;
     line-height: 1.5;
     color: black;
+    font-family: "Helvetica";
+
   }
+  @media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr; 
+    padding: 1rem; 
+  }
+
+  .contact-image {
+    width: 100%; 
+    max-width: 300px; 
+    margin: 0 auto; 
+  }
+
+  .contact-text h2 {
+    font-size: 24pt;
+  }
+
+  .contact-text p {
+    font-size: 0.9rem; 
+    line-height: 1.4;
+  }
+
+  .button-container {
+    margin-top: 1rem; 
+  }
+}
 </style>
