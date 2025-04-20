@@ -1,0 +1,234 @@
+---
+
+---
+
+<!-- Font Awesome CDN til ikoner -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<style>
+  .kea-footer {
+    background-color: #1c2a39;
+    color: #fff;
+    padding: 2em 0;
+    font-size: 0.9em;
+    font-family: "Roboto", sans-serif;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .kea-footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+
+  .kea-footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-bottom: 37.5px !important;
+  }
+
+  .kea-footer__col {
+    flex: 1 1 220px;
+    min-width: 200px;
+  }
+
+  .kea-footer__col h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .kea-footer__col .kea-footer__tagline {
+    font-weight: 700;
+    margin: 1em 0;
+    color: #fff;
+    margin-top: 36px;
+    margin-bottom: 40px;
+    font-size: calc(15px + (1 * ((100vw - 320px) / (1200 - 320))));
+  }
+
+  .kea-footer__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .kea-footer__nav li {
+    margin-bottom: 0.5em;
+  }
+
+  .kea-footer__nav a,
+  .kea-footer__social a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: normal;
+  }
+
+  .kea-footer__nav a:hover,
+  .kea-footer__social a:hover {
+    color: #e12619;
+  }
+
+  .kea-footer__social {
+    margin-top: 1em;
+  }
+
+  .kea-footer__social a {
+    margin-right: 0.6em;
+    font-size: 2em;
+  }
+
+  .kea-footer__podbean {
+    width: 150px;
+    height: 56px;
+    margin-top: 1.5em;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .kea-footer__row {
+      flex-direction: column;
+    }
+
+    .kea-footer__col {
+      margin-bottom: 2em;
+    }
+  }
+</style>
+
+<footer class="kea-footer">
+  <div class="kea-footer__container">
+    <div class="kea-footer__row">
+      <div class="kea-footer__col">
+        <h3>KEA - Københavns Erhvervsakademi</h3>
+        <p>Guldbergsgade 29N<br />2200 København N</p>
+        <p class="kea-footer__tagline">
+          Du skal ikke bare vide.<br />Du skal kunne.
+        </p>
+        <div class="kea-footer__social">
+          <a
+            href="https://www.facebook.com/KEAstudentlife/"
+            aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a
+          >
+          <a
+            href="https://www.linkedin.com/school/kea-k-benhavns-erhvervsakademi/"
+            aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a
+          >
+          <a href="https://www.instagram.com/keacph/" aria-label="Instagram"
+            ><i class="fab fa-instagram fa-2x"></i></a
+          >
+          <a href="https://twitter.com/keacph/" aria-label="Twitter"
+            ><i class="fab fa-twitter fa-2x"></i></a
+          >
+          <a href="https://www.youtube.com/user/KEAkanal" aria-label="YouTube"
+            ><i class="fab fa-youtube fa-2x"></i></a
+          >
+        </div>
+        <a href="http://keacph.podbean.com" target="_blank" rel="noopener">
+          <img
+            src="//www.podbean.com/images/badges/w600.png"
+            alt="Find vores podcasts på Podbean"
+            class="kea-footer__podbean"
+          />
+        </a>
+      </div>
+
+      <div class="kea-footer__col">
+        <h3>Vejledning</h3>
+        <ul class="kea-footer__nav">
+          <li>
+            <a href="/studiehandbog/studieadministration"
+              >Studieadministrationen</a
+            >
+          </li>
+          <li>
+            <a href="/studiehandbog/studie-og-karrierevejledning"
+              >Studie- og Karrierevejledning</a
+            >
+          </li>
+          <li>
+            <a href="/studiehandbog/sps">SPS (specialpædagogisk støtte)</a>
+          </li>
+          <li><a href="/studiehandbog/su">SU-vejledning</a></li>
+          <li><a href="/praktik">Praktik</a></li>
+        </ul>
+      </div>
+
+      <div class="kea-footer__col">
+        <h3>Relevante links</h3>
+        <ul class="kea-footer__nav">
+          <li><a href="https://outlook.office.com/">KEA Webmail</a></li>
+          <li>
+            <a href="http://bibliotek.kea.dk/" target="_blank">KEA Bibliotek</a>
+          </li>
+          <li>
+            <a href="https://bibliotek.kea.dk/da/studieviden" target="_blank"
+              >Studieviden</a
+            >
+          </li>
+          <li>
+            <a href="https://kea-fronter.itslearning.com/" target="_blank"
+              >Itslearning</a
+            >
+          </li>
+          <li>
+            <a href="https://katalog.kea.dk/" target="_blank"
+              >Fag- og modulkatalog</a
+            >
+          </li>
+          <li>
+            <a href="/studiehandbog/studieaktivitetsmodel"
+              >Studieaktivitetsmodel</a
+            >
+          </li>
+          <li>
+            <a
+              href="/studieliv-og-faciliteter/studieliv/frivillige-foreninger/paris-aftalen"
+              >PARIS-aftalen</a
+            >
+          </li>
+          <li>
+            <a href="https://kea.dk/ordensregler" target="_blank"
+              >Ordensregler</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="kea-footer__col">
+        <h3>Praktisk info</h3>
+        <ul class="kea-footer__nav">
+          <li>
+            <a href="https://kea.dk/cookies-og-privatliv" target="_blank"
+              >Cookies og privatliv</a
+            >
+          </li>
+          <li>
+            <a href="https://kea.dk/persondatapolitik" target="_blank"
+              >Persondatapolitik</a
+            >
+          </li>
+          <li>
+            <a href="https://www.was.digst.dk/kea-dk"
+              >Tilgængelighedserklæring</a
+            >
+          </li>
+          <li><a href="/studiehandbog/adresser">Find vej på KEA</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
