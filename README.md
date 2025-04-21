@@ -1,8 +1,8 @@
-Teknisk Dokumentation – Circular Lab
+#Teknisk Dokumentation – Circular Lab
 
 Dette website er udviklet med Astro, et moderne frontend-framework, som tillader en komponentbaseret og effektiv tilgang til udvikling af statiske og delvist dynamiske websites. Projektets fokus har været på struktur, æstetik og integration af eksterne data, snarere end mobiloptimering. Siden er dog responsiv og fungerer på tværs af skærmstørrelser.
 
-Projektstruktur
+##Projektstruktur
 
 Projektet er organiseret i følgende mapper og filer:
 
@@ -18,13 +18,13 @@ Projektet er organiseret i følgende mapper og filer:
 
 Astro tillader brug af både JSX-lignende komponentstruktur og ren HTML, hvilket giver fleksibilitet under opbygningen.
 
-Typografi og design
+##Typografi og design
 
 Vi har valgt Helvetica som gennemgående skrifttype for at understøtte Circular Labs æstetiske og professionelle profil. Designet er minimalistisk og tekstbåret med høj kontrast og struktureret grid-opsætning.
 
 Farvepaletten er nedtonet og enkel, med sort, grå og enkelte fremhævede accenter som orange og blå for at skabe ro og fokus på indhold.
 
-Komponenter og struktur
+##Komponenter og struktur
 
 Siden er opbygget ved hjælp af følgende nøglekomponenter:
 
@@ -42,26 +42,32 @@ GlassButton.astro: En call-to-action-knap, fx “Kontakt os her”. Den har vi k
 
 Alle komponenter er tilpasset til at kunne bruges på tværs af flere sektioner.
 
-Dynamisk indhold via Supabase
+
+##Dynamisk indhold via Supabase
 
 Vi har integreret Supabase som database og backend-løsning. Her har vi selv oprettet tabeller og indhold, som hentes ind i Astro ved hjælp af fetch-funktioner i .astro-filer.
 
-Data hentes dynamisk og vises blandt andet i:
+Data hentes dynamisk og vises i:
 
 Kalender for kommende events (med billeder, datoer og tekst)
 
+###Dynamisk Indhold via Supabase:
+
+Programsiden og single events er bygget vha. indhold fra Supabase databasen. 
+Den består af en tabel med kolonnerne ‘event_title’, ‘event_description’, ‘event_type’, ‘event_slug’, ‘event_img’, ‘event_location’, ‘event_date’, ‘event_start’ og ‘event_end’. 
+Herfra er der importeret indhold via ‘url’ og ‘key’ fra Supabase projektet. De er defineret som konstanter i html-sidernes fences.
 
 Det dynamiske setup gør det let at opdatere indhold direkte via Supabase UI uden at skulle deploye koden igen.
 
-Responsivitet og platformsfokus
+##Responsivitet og platformsfokus
 
 Siden er responsiv og fungerer på både mobil og desktop, men mobilvisning har ikke været primært fokusområde. I stedet har vi designet siden til at fungere som et visuelt univers, der matcher Circular Labs udtryk på Instagram, og skaber sammenhæng mellem sociale medier og website.
 
-Funktionalitet
+##Funktionalitet
 
 Der er ikke integreret filtrering eller avanceret brugerinteraktion. Fokus har været på at vise data visuelt, simpelt og elegant med en frontend, der er let at vedligeholde.
 
-Konklusion
+##Konklusion
 
 Projektet demonstrerer en moderne frontend-løsning bygget med Astro og Supabase, med vægt på komponentstruktur, dynamisk dataintegration og designorienteret formidling. Resultatet er en præsentationsside, som understøtter Circular Labs identitet og samtidig gør brug af tidssvarende teknologier.
 
