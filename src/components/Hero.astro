@@ -1,38 +1,35 @@
 ---
 const materials = [
-  { img: "public/imgs_circular_lab/materialer/material-01.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-02.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-03.webp" },
+  { img: "/imgs_circular_lab/materialer/material-01.webp" },
+  { img: "/imgs_circular_lab/materialer/material-02.webp" },
+  { img: "/imgs_circular_lab/materialer/material-03.webp" },
   { img: "public/imgs_circular_lab/materialer/material-10.webp" },
 
-  { img: "public/imgs_circular_lab/materialer/material-04.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-05.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-06.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-07.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-08.webp" },
-  { img: "public/imgs_circular_lab/materialer/material-09.webp" },
+  { img: "/imgs_circular_lab/materialer/material-04.webp" },
+  { img: "/imgs_circular_lab/materialer/material-05.webp" },
+  { img: "/imgs_circular_lab/materialer/material-06.webp" },
+  { img: "/imgs_circular_lab/materialer/material-07.webp" },
+  { img: "/imgs_circular_lab/materialer/material-08.webp" },
+  { img: "/imgs_circular_lab/materialer/material-09.webp" },
 ];
 ---
+
 <style>
-
-html {
-  background-color: #ededed;
-
-}
+  html {
+    background-color: #ededed;
+  }
   .hero {
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   .title-img {
-  width: 100%;
-  max-width: 700px;
-  display: block;
-}
-
+    width: 100%;
+    max-width: 700px;
+    display: block;
+  }
 
   .grid {
     display: grid;
@@ -51,7 +48,6 @@ html {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     height: 70%;
     font-family: "Helvetica";
-
   }
 
   .dot {
@@ -80,7 +76,6 @@ html {
     flex-direction: column;
     gap: 0.2rem;
     font-family: "Helvetica";
-
   }
 
   .qr {
@@ -90,50 +85,51 @@ html {
     margin: 0 auto;
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2rem 1rem;
+    }
+    .hero {
+      padding: 2rem 1rem;
+    }
+    .title-img {
+      max-width: 300px;
+    }
 
-  .hero {
-    padding: 2rem 1rem;
-  }
-  .hero {
-    padding: 2rem 1rem; 
-  }
-  .title-img {
-    max-width: 300px;
-  }
+    .grid {
+      gap: 1.5rem;
+    }
 
-  .grid {
-    gap: 1.5rem; 
-  }
+    .card {
+      padding: 1rem;
+    }
 
-  .card {
-    padding: 1rem; 
-  }
+    .card-info {
+      font-size: 0.7rem;
+    }
 
-  .card-info {
-    font-size: 0.7rem; 
+    .qr {
+      width: 20px;
+      height: 20px;
+    }
   }
-
-  .qr {
-    width: 20px; 
-    height: 20px;
-  }
-}
 </style>
 
 <section class="hero">
-  <img src="public/ti.png" alt="Circular Lab" class="title-img" />
+  <img src="/index_imgs/ti.png" alt="Circular Lab" class="title-img" />
   <div class="grid">
-    {materials.map((material) => (
-      <div class="card">
-        <div class="dot"></div>
-        <img src={material.img} alt="Material" class="material-img" />
-        <div class="card-info">
-          <span>0603 – 01</span>
-          <span>Material Connection</span>
+    {
+      materials.map((material) => (
+        <div class="card">
+          <div class="dot" />
+          <img src={material.img} alt="Material" class="material-img" />
+          <div class="card-info">
+            <span>0603 – 01</span>
+            <span>Material Connection</span>
+          </div>
+          <img src="/index_imgs/qr.png" alt="QR code" class="qr" />
         </div>
-        <img src="public/qr.png" alt="QR code" class="qr" />
-      </div>
-    ))}
+      ))
+    }
   </div>
 </section>

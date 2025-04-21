@@ -1,87 +1,92 @@
 ---
-import GlassButton from './GlassButton.astro'; 
+import GlassButton from "./GlassButton.astro";
 ---
 
 <section class="events">
   <h2>Events</h2>
   <p>
-    Følg med her i kalenderen og hold dig opdateret på, hvad der sker i Circular Lab. <br>
+    Følg med her i kalenderen og hold dig opdateret på, hvad der sker i Circular
+    Lab. <br />
     Vejledninger, foredrag, events og lignende vil løbende blive lagt ind i kalenderen.
   </p>
 
   <div class="event-box">
     <a href="/events">
-
-    <div class="event-left">
-      <strong>Repair Café</strong><br />
-      <div class="event-left1">
-
-      9. April 2025<br />
-      14:00–16:00<br /> <br>
-      <div class="date">
-        <a href="/date.ics" download>
-          <strong>Gem dato<br /></strong>
-        </a>
+      <div class="event-left">
+        <strong>Repair Café</strong><br />
+        <div class="event-left1">
+          9. April 2025<br />
+          14:00–16:00<br />
+          <br />
+          <div class="date">
+            <a href="/date.ics" download>
+              <strong>Gem dato<br /></strong>
+            </a>
+          </div>
+        </div>
       </div>
-
-
     </a>
-    </div>    </div>
 
     <div class="event-center">
       <p>
-        Repair Café i Circular Lab hvor vi arbejder med den cirkulære forretningsmodel
-        “reparation”. <br> På denne workshop har vi fokus på lapning af tekstiler.
+        Repair Café i Circular Lab hvor vi arbejder med den cirkulære
+        forretningsmodel “reparation”. <br /> På denne workshop har vi fokus på lapning
+        af tekstiler.
       </p>
     </div>
     <div class="event-right">
       <div class="event-images">
-        <img src="public/imgs_circular_lab/materialer/material-01.webp" alt="Billede af event" />
-        <img src="public/imgs_circular_lab/materialer/material-02.webp" alt="Billede af event" />
-        <img src="public/imgs_circular_lab/materialer/material-08.webp" alt="Billede af event" />
+        <img
+          src="/imgs_circular_lab/materialer/material-01.webp"
+          alt="Billede af event"
+        />
+        <img
+          src="/imgs_circular_lab/materialer/material-02.webp"
+          alt="Billede af event"
+        />
+        <img
+          src="/imgs_circular_lab/materialer/material-08.webp"
+          alt="Billede af event"
+        />
       </div>
     </div>
-    
   </div>
   <div class="button-container">
     <a href="/events">
       <GlassButton text="Se Kalender her" />
-    </a>  </div>
-
+    </a>
+  </div>
 </section>
-<script>
-  
-</script>
+<script></script>
 <style>
   .events {
     padding: 2rem 20rem;
   }
 
   a {
-    text-decoration: none; 
+    text-decoration: none;
     color: black;
   }
 
   .events h2 {
     font-family: "Helvetica";
-  font-weight: bolder;
-  font-size: 30pt;
-  -webkit-text-stroke: 1px #ff671f;
-  text-shadow: #ff905991 0px 4px 11px;
-  color: #ededed;
-}
+    font-weight: bolder;
+    font-size: 30pt;
+    -webkit-text-stroke: 1px #ff671f;
+    text-shadow: #ff905991 0px 4px 11px;
+    color: #ededed;
+  }
 
   .event-box {
     display: flex;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     gap: 1rem;
     border-top: 1px solid #ff6a00;
     border-bottom: 1px solid #ff6a00;
     padding: 1rem 0;
     margin: 1rem 0;
-    width: 100%; 
+    width: 100%;
     color: black;
-
   }
 
   .event-left {
@@ -89,23 +94,21 @@ import GlassButton from './GlassButton.astro';
     font-size: 1.5rem;
     padding-top: 0.6rem;
     color: black;
-
-  }  
+  }
   .event-left1 {
     padding-top: 1rem;
-    flex: 1; 
+    flex: 1;
     font-size: 1rem;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-
   }
 
   .event-center {
-    flex: 2; 
+    flex: 2;
   }
 
   .event-right {
-    flex: 3; 
+    flex: 3;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -124,42 +127,42 @@ import GlassButton from './GlassButton.astro';
   .event-left,
   .event-center,
   .event-right {
-    flex-shrink: 1; 
+    flex-shrink: 1;
     color: black;
   }
   @media (max-width: 768px) {
-  .events {
-    padding: 1rem; /* Reducer padding på mobil */
-  }
+    .events {
+      padding: 1rem; /* Reducer padding på mobil */
+    }
 
-  .event-box {
-    flex-direction: column; /* Skift til kolonne-layout */
-    gap: 1rem;
-  }
+    .event-box {
+      flex-direction: column; /* Skift til kolonne-layout */
+      gap: 1rem;
+    }
 
-  .event-left {
-    font-size: 1.2rem; /* Reducer tekststørrelsen */
-    text-align: center; /* Centrer teksten */
-  }
+    .event-left {
+      font-size: 1.2rem; /* Reducer tekststørrelsen */
+      text-align: center; /* Centrer teksten */
+    }
 
-  .event-left1 {
-    font-size: 1rem;
-    text-align: center;
-  }
+    .event-left1 {
+      font-size: 1rem;
+      text-align: center;
+    }
 
-  .event-center {
-    text-align: center; /* Centrer teksten */
-    font-size: 0.9rem;
-  }
+    .event-center {
+      text-align: center; /* Centrer teksten */
+      font-size: 0.9rem;
+    }
 
-  .event-right {
-    justify-content: center; /* Centrer billederne */
-    margin-top: 1rem;
-  }
+    .event-right {
+      justify-content: center; /* Centrer billederne */
+      margin-top: 1rem;
+    }
 
-  .event-images img {
-    width: 80px; /* Gør billederne større på mobil */
-    height: auto;
+    .event-images img {
+      width: 80px; /* Gør billederne større på mobil */
+      height: auto;
+    }
   }
-}
 </style>
