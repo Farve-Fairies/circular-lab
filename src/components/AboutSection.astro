@@ -1,85 +1,95 @@
 ---
-import GlassButton from "./GlassButton.astro";
-import PracticalInfo from "./PracticalInfo.astro";
+import GlassButton from './GlassButton.astro'; 
+import PracticalInfo from './PracticalInfo.astro';
 ---
 
 <style>
-  .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4rem 20rem;
-    background-color: #ededed;
-    gap: 2rem;
-  }
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 20rem;
+      background-color: #ededed;
+      gap: 2rem;
+    }
+  
+    .about-left {
+      flex: 1 1 60%;
+      max-width: 700px;
+    }
+  
+    .about-left h2 {
+      font-family: "Helvetica";
+      font-weight: bolder;
+  font-size: 30pt;
+  -webkit-text-stroke: 1px #ff671f;
+  text-shadow: #ff905991 0px 4px 11px;
+  color: #ededed;
+}
 
-  .about-left {
-    flex: 1 1 60%;
-    max-width: 700px;
-  }
+  
+    .about-left p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-family: "Helvetica";
 
-  .about-left h2 {
-    font-family: "Helvetica";
-    font-weight: bolder;
-    font-size: 30pt;
-    -webkit-text-stroke: 1px #ff671f;
-    text-shadow: #ff905991 0px 4px 11px;
-    color: #ededed;
-  }
+    }
+  
+    .about-left p strong {
+      font-weight: 700;
+      font-family: "Helvetica";
 
-  .about-left p {
-    /* font-size: 1rem;
-    line-height: 1.7; */
-    margin-bottom: 1.5rem;
-    /* font-family: "Helvetica"; */
-  }
+    }
+  
+    .about-left a {
+      text-decoration: underline;
+      color: #000;
+      font-family: "Helvetica";
 
-  .about-left p strong {
-    font-weight: 700;
-    font-family: "Helvetica";
-  }
+    }
+  
+    .about-right {
+      flex: 1 1 30%;
+    
+    }
+  
+    .about-right h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-family: "Helvetica";
 
-  .about-left a {
-    text-decoration: underline;
-    color: #000;
-    font-family: "Helvetica";
-  }
+    }
+  
+    .about-right p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      font-family: "Helvetica";
 
-  .about-right {
-    flex: 1 1 30%;
-  }
+    }
+  
+    .about-right a {
+      text-decoration: underline;
+      color: #000;
+      font-family: "Helvetica";
 
-  .about-right h3 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    font-family: "Helvetica";
-  }
+    }
 
-  .about-right p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-    font-family: "Helvetica";
-  }
-
-  .about-right a {
-    text-decoration: underline;
-    color: #000;
-    font-family: "Helvetica";
-  }
-
-  .cirkel {
+  .cirkel{
     position: absolute;
     height: 30px;
+
   }
-  .udråb {
+  .udråb{
     position: absolute;
     height: 40px;
+
   }
   .streg {
     position: relative;
     height: 10px;
-    top: 13px;
+top: 13px;
   }
   .omstilling {
     position: relative;
@@ -94,89 +104,77 @@ import PracticalInfo from "./PracticalInfo.astro";
   }
 
   .button-container a {
-    text-decoration: none;
-    font-family: "Helvetica";
+  text-decoration: none; 
+  font-family: "Helvetica";
+
+}
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Skift til kolonne-layout */
+    padding: 2rem 1rem; /* Reducer padding på mobil */
   }
-  @media (max-width: 768px) {
-    .about-section {
-      flex-direction: column; /* Skift til kolonne-layout */
-      padding: 2rem 1rem; /* Reducer padding på mobil */
-    }
 
-    .about-left {
-      flex: 1 1 100%; /* Fyld hele bredden */
-      max-width: 100%; /* Fjern begrænsning på bredden */
-    }
-
-    .about-left h2 {
-      font-size: 24pt; /* Reducer overskriftens størrelse */
-      text-align: center; /* Centrer overskriften */
-    }
-
-    .about-left p {
-      font-size: 0.9rem; /* Reducer tekststørrelsen */
-      line-height: 1.5;
-    }
-
-    .about-right {
-      flex: 1 1 100%; /* Fyld hele bredden */
-      max-width: 100%; /* Fjern begrænsning på bredden */
-      margin-top: 2rem; /* Tilføj afstand til venstre sektion */
-    }
-
-    .button-container {
-      text-align: center; /* Centrer knappen */
-      margin-top: 1.5rem;
-    }
-
-    .pil {
-      display: none; /* Skjul pilen på mobil */
-    }
+  .about-left {
+    flex: 1 1 100%; /* Fyld hele bredden */
+    max-width: 100%; /* Fjern begrænsning på bredden */
   }
-</style>
 
-<section class="about-section">
-  <div class="about-left">
-    <h2>Circular Lab</h2>
+  .about-left h2 {
+    font-size: 24pt; /* Reducer overskriftens størrelse */
+    text-align: center; /* Centrer overskriften */
+  }
 
-    <p>
-      er et community lab med fokus på cirkulære forretningsmodeller, strategier
-      og design. Circular Lab er for <strong>
-        <img class="cirkel" src="/index_imgs/Vector-1.png" alt="cirkel" /> KEAs studerende</strong
-      >, undervisere og medlemmer af samarbejdende institutioner. Circular Lab
-      samarbejder på tværs af de andre labs på KEA.
-    </p>
-    <img class="udråb" src="/index_imgs/Group 19.png" alt="!" />
-  </div>
-  <p>
-    Circular Lab er et multifunktionelt rum, der indbyder til at udforske og
-    undersøge nye cirkulære forretningsmodeller og hvordan vi designer cirkulære
-    produkter <br /> Gennem <img
-      class="streg"
-      src="/index_imgs/strreg.png"
-      alt="streg"
-    />
-    <strong>workshops, foredrag, community caféer og virksomhedsbesøg</strong>
-    åbner vi op for mulighederne der følger med den cirkulære <img
-      class="omstilling"
-      src="/index_imgs/Group-6.png"
-      alt="omstilling"
-    /> og hvordan man kan udforske dem igennem praksis og teori.
-  </p>
-  <p>
-    Lab’et bruges til undervisning, workshops, arrangementer, udstillinger og
-    eksperimenter. Følg med i kalenderen for at se de kommende events og
-    happenings.
-    <img class="pil" src="/index_imgs/Group-2.png" alt="pil" />
-  </p>
+  .about-left p {
+    font-size: 0.9rem; /* Reducer tekststørrelsen */
+    line-height: 1.5;
+  }
 
-  <div class="button-container">
-    <a href="mailto:circular@kea.dk">
-      <GlassButton text="Kontakt os her" />
-    </a>
-  </div>
-</section>
+  .about-right {
+    flex: 1 1 100%; /* Fyld hele bredden */
+    max-width: 100%; /* Fjern begrænsning på bredden */
+    margin-top: 2rem; /* Tilføj afstand til venstre sektion */
+  }
 
-<div class="about-right">
-  <PracticalInfo />
-</div>
+  .button-container {
+    text-align: center; /* Centrer knappen */
+    margin-top: 1.5rem;
+  }
+
+  .pil {
+    display: none; /* Skjul pilen på mobil */
+  }
+}
+  </style>
+  
+  <section class="about-section">
+    <div class="about-left">
+      <h2>Circular Lab</h2>
+      
+      <p>
+        er et community lab</strong> med fokus på cirkulære forretningsmodeller, strategier og design.
+        Circular Lab er for <strong> <img class="cirkel" src="public/Vector-1.png" alt="cirkel"> KEAs studerende</strong>, undervisere og medlemmer af samarbejdende institutioner.
+        Circular Lab samarbejder på tværs af de andre labs på KEA. <img class="udråb" src="public/Group 19.png" alt="!"> 
+      </p>
+      <p>
+        Circular Lab er et multifunktionelt rum, der indbyder til at udforske og undersøge nye cirkulære
+        forretningsmodeller og hvordan vi designer cirkulære produkter <br>  Gennem <img class="streg" src="public/strreg.png" alt="streg">  <strong>workshops, foredrag, community caféer og virksomhedsbesøg</strong> 
+        åbner vi op for mulighederne der følger med den cirkulære <img class="omstilling" src="public/Group-6.png" alt="omstilling"> og hvordan man kan udforske dem igennem praksis og teori.
+      </p> 
+      <p>
+        Lab’et bruges til undervisning, workshops, arrangementer, udstillinger og eksperimenter.
+        Følg med i kalenderen for at se de kommende events og happenings. 
+        <img class="pil" src="public/Group-2.png" alt="pil">
+      </p>
+
+      <div class="button-container">
+      <a href="mailto:circular@kea.dk">
+        <GlassButton text="Kontakt os her" />   
+      </a>
+
+         </div>
+    </div>
+
+    <div class="about-right"> 
+      <PracticalInfo />
+    </div>
+  </section>

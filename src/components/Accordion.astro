@@ -3,31 +3,27 @@ const { title, content } = Astro.props;
 ---
 
 <details class="accordion">
-  <summary>
-    <img
-      class="accordion-icon closed"
-      src="/index_imgs/Vector.png"
-      alt="Pil lukket"
-    />
-    <img
-      class="accordion-icon open"
-      src="/index_imgs/streg.png"
-      alt="Pil åben"
-    />
+  <summary> <img class="accordion-icon closed" src="public/Vector.png" alt="Pil lukket" />
+    <img class="accordion-icon open" src="public/streg.png" alt="Pil åben" />
     {title}
+   
   </summary>
   <div class="accordion-content">
     <slot />
   </div>
 </details>
 
-<style>
-  .accordion {
-    padding: 1rem 20rem;
-    font-size: 1.3rem;
-    font-family: "Helvetica";
-  }
 
+
+<style>
+ .accordion {
+      padding: 1rem 20rem;
+      font-size: 1.3rem;
+      font-family: "Helvetica";
+
+
+    }
+ 
   .accordion summary {
     font-weight: bold;
     padding: 1rem 0;
@@ -36,6 +32,7 @@ const { title, content } = Astro.props;
     list-style: none;
     transition: color 0.3s ease;
     font-family: "Helvetica";
+
   }
 
   .accordion summary:hover {
@@ -46,13 +43,10 @@ const { title, content } = Astro.props;
     padding: 0.5rem 0;
     font-size: 1rem;
     max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
+    opacity: 0; 
+    transform: translateY(-10px); 
     overflow: hidden;
-    transition:
-      max-height 0.3s ease,
-      opacity 0.3s ease,
-      transform 0.3s ease;
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease; 
     line-height: 1.5;
   }
 
@@ -63,40 +57,40 @@ const { title, content } = Astro.props;
   }
 
   .accordion-icon.open {
-    display: none;
+    display: none; 
   }
 
   details[open] .accordion-icon.closed {
-    display: none;
+    display: none; 
   }
 
   details[open] .accordion-icon.open {
-    display: inline;
+    display: inline; 
   }
 
-  details[open] .accordion-content {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
+details[open] .accordion-content {
+    max-height: 500px; 
+    opacity: 1; 
+    transform: translateY(0); 
   }
   @media (max-width: 768px) {
-    .accordion {
-      padding: 1rem; /* Reducer padding på mobil */
-      font-size: 1rem; /* Reducer tekststørrelsen */
-    }
-
-    .accordion summary {
-      font-size: 1rem; /* Reducer overskriftens størrelse */
-      padding: 0.8rem 0; /* Mindre padding for overskriften */
-    }
-
-    .accordion-content {
-      font-size: 0.9rem; /* Reducer tekststørrelsen for indhold */
-      line-height: 1.4; /* Juster linjehøjden */
-    }
-
-    .accordion-icon {
-      width: 14px; /* Gør ikonet mindre på mobil */
-    }
+  .accordion {
+    padding: 1rem; /* Reducer padding på mobil */
+    font-size: 1rem; /* Reducer tekststørrelsen */
   }
+
+  .accordion summary {
+    font-size: 1rem; /* Reducer overskriftens størrelse */
+    padding: 0.8rem 0; /* Mindre padding for overskriften */
+  }
+
+  .accordion-content {
+    font-size: 0.9rem; /* Reducer tekststørrelsen for indhold */
+    line-height: 1.4; /* Juster linjehøjden */
+  }
+
+  .accordion-icon {
+    width: 14px; /* Gør ikonet mindre på mobil */
+  }
+}
 </style>
