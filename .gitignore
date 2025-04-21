@@ -24,4 +24,16 @@ pnpm-debug.log*
 .idea/
 
 #Billedemappe
-imgs_circular_lab/ 
+imgs_circular_lab/illustrationer
+
+imgs_circular_lab/materialer
+
+imgs_circular_lab/repaircafe_imgs
+
+imgs_circular_lab/events_img
+
+imgs_circular_lab/titler
+
+arrow_button.svg
+
+
