@@ -74,13 +74,13 @@ Projektstruktur:
 /components: Genanvendelige komponenter (layout, tekstkort, CTA-knapper, dynamiske visninger).
 /layouts: Layout-komponenter, der definerer HTML-skelettet.
 /pages: Sider som .astro-filer, med import af relevante komponenter.
-/public: Billeder, favicon, statiske assets.
+/public: Billeder,favicon, statiske assets.
 /styles: Eksterne CSS-filer til global og komponentstyling.
 Astro Flexibilitet: Brug af både JSX-lignende komponentstruktur og ren HTML.
 
 Typografi og Design:
 
-Skrifttype: Helvetica – understøtter æstetik og professionalisme.
+Skrifttype: 'Helvetica Neue' og 'Helvetica LT STD Condensed' – understøtter æstetik og professionalisme.
 Design: Minimalistisk, tekstbaseret med høj kontrast og struktureret grid.
 Farvepalette: Nedtonet, sort, grå, med accenter i orange og blå.
 Komponenter og Struktur:
@@ -93,9 +93,15 @@ Hero.astro: Dynamisk billeder, indlæst fra Supabase.
 GlassButton.astro: CTA-knap ("Kontakt os her"), kodet med CodePen.
 Dynamisk Indhold via Supabase:
 
-Supabase: Database og backend-løsning, data hentet dynamisk via fetch i .astro-filer.
-Anvendelse: Kalender med kommende events (billeder, datoer, tekst).
-Opdatering: Data opdateres via Supabase UI uden deploy af kode.
+#Supabase: 
+Database og backend-løsning, data hentet dynamisk via fetch i .astro-filer.
+
+Anvendelse: 
+Programsiden og single events er bygget vha. indhold fra Supabase databasen.
+Den består af en tabel med kolonnerne ‘event_title’, ‘event_description’, ‘event_type’, ‘event_slug’, ‘event_img’, ‘event_location’, ‘event_date’, ‘event_start’ og ‘event_end’. 
+Herfra er der importeret indhold via ‘url’ og ‘key’ fra Supabase projektet. De er defineret som konstanter i html-sidernes fences. 
+
+
 Responsivitet og Platforms Fokus:
 
 Responsivitet: Fungerer på både mobil og desktop. Fokus på visuelt univers, der matcher Circular Labs Instagram-udtryk.
