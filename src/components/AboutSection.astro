@@ -4,6 +4,39 @@ import PracticalInfo from './PracticalInfo.astro';
 ---
 
 <style>
+  @font-face {
+  font-family: "Helvetica LT STD Condensed";
+  src:
+    url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
+    url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src:
+    url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuebold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Black";
+  src:
+    url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueBlack.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src:
+    url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuelight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
     .about-section {
       display: flex;
       flex-wrap: wrap;
@@ -18,7 +51,7 @@ import PracticalInfo from './PracticalInfo.astro';
     }
   
     .about-left h2 {
-      font-family: "Helvetica";
+      font-family: "Helvetica Neue BOLD";
       font-weight: bolder;
   font-size: 30pt;
   -webkit-text-stroke: 1px #ff671f;
@@ -31,20 +64,20 @@ import PracticalInfo from './PracticalInfo.astro';
       font-size: 1rem;
       line-height: 1.7;
       margin-bottom: 1.5rem;
-      font-family: "Helvetica";
+      font-family: "Helvetica Neue Light";
 
     }
   
     .about-left p strong {
       font-weight: 700;
-      font-family: "Helvetica";
+      font-family: "Helvetica Neue Light";
 
     }
   
     .about-left a {
       text-decoration: underline;
       color: #000;
-      font-family: "Helvetica";
+      font-family: "Helvetica Neue Light";
 
     }
   
@@ -57,7 +90,7 @@ import PracticalInfo from './PracticalInfo.astro';
       font-size: 1rem;
       font-weight: bold;
       margin-bottom: 1rem;
-      font-family: "Helvetica";
+      font-family: "Helvetica Neue Light";
 
     }
   
@@ -67,12 +100,11 @@ import PracticalInfo from './PracticalInfo.astro';
       margin-bottom: 1rem;
       font-family: "Helvetica Neue Light";
     }
-  
     .about-right a {
       text-decoration: underline;
       color: #000;
       font-family: "Helvetica";
-
+      font-family: "Helvetica Neue Light";
     }
 
   .cirkel{
@@ -104,7 +136,7 @@ top: 13px;
 
   .button-container a {
   text-decoration: none; 
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue Light";
 
 }
 @media (max-width: 768px) {
