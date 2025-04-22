@@ -68,6 +68,11 @@ p {
   font-family: "Helvetica Neue Light";
   font-size: 12pt;
 }
+
+.bold-p {
+  font-family: "Helvetica Neue Bold";
+  font-size: 12pt;
+}
 a {
   font-family: "Helvetica LT STD Condensed";
   text-transform: uppercase;
@@ -86,14 +91,14 @@ a {
   justify-content: start;
   align-items: start;
 
-  width: 70%;
+  width: 80%;
 }
 
 /*  */
 
 /* PROGRAMSIDE  CSS */
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .title {
     padding-right: 20px;
   }
@@ -104,6 +109,7 @@ a {
   .event_card {
     padding-left: 20px;
     padding-right: 20px;
+    transition: all 0.5s ease-in-out;
   }
 
   .event_description {
@@ -112,6 +118,7 @@ a {
 
   .event_card_img {
     display: none;
+    border-radius: 20px;
   }
   .event_essentials {
     display: flex;
@@ -122,7 +129,7 @@ a {
     padding: 20px 20px 20px 0px;
   }
 
-  h1 {
+  .padding-left {
     margin: 0 auto;
     padding-left: 20px;
   }
@@ -131,46 +138,58 @@ a {
     display: flex;
     margin-top: 30px;
     gap: 10px;
+    margin-left: -9px;
   }
   .arrow_container img {
     margin-top: -4px;
   }
+
+  .event_display_img {
+    display: none;
+  }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   /*  */
   /* DESKTOP */
   /*  */
 
   .event_card {
     padding-left: 40px;
+
+    transition: all 0.5s ease-in-out;
+  }
+
+  .event_card img {
+    border-radius: 10px;
+  }
+  .event_card:hover {
+    transform: translate(50px);
+
+    transition: all 0.5s ease-in-out;
+    filter: saturation(1.2);
   }
   .event_card_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 20px 20px 0px;
+    gap: 20px;
   }
 
   .event_text_wrapper {
     display: flex;
-    justify-content: baseline;
-    align-items: baseline;
-    gap: 20px;
-  }
-
-  .event_card_wrapper p {
-    margin-top: 10px;
+    align-items: start;
   }
 
   .arrow_container {
     display: flex;
     position: absolute;
-    top: 70px;
-    left: 0px;
+    top: 80px;
+    left: -9px;
     justify-content: start;
-    align-items: center;
-    margin-top: 40px;
+    align-items: start;
     gap: 10px;
+    margin: 0 auto;
   }
 
   .arrow_container img {
@@ -184,14 +203,22 @@ a {
   .event_description {
     position: relative;
     max-width: 300px;
+    margin-top: 3px;
   }
 
-  .event_card_img {
-    width: 150px;
-    margin-left: 80px;
+  #MyDate {
+    margin-top: 10px;
+    margin-bottom: 4px;
   }
 
-  h1 {
+  .event_display_img {
+    margin-left: -30px;
+    width: 100px;
+    margin-right: 10px;
+    margin-top: -12px;
+  }
+
+  .padding-left {
     padding-left: 40px;
   }
 
@@ -199,6 +226,69 @@ a {
     display: flex;
     width: 70%;
   }
+
+  .event_display {
+    display: flex;
+  }
+
+  .event_display img {
+    filter: hue-rotate(10deg);
+  }
+
+  .event_img_container {
+    display: flex;
+    gap: 40px;
+    margin-left: 158px;
+  }
+}
+
+.event_img_container img {
+  width: 170px;
 }
 
 /*  */
+
+/* SINGLE CSS */
+
+.flex {
+  display: flex;
+  gap: 10px;
+  line-height: 2.5;
+}
+
+.border {
+  border: 0.5px solid #ff671f;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  margin: 20px 0px 40px 0px;
+  box-shadow: #ff90593b 0px 4px 25px;
+  width: 32rem;
+}
+
+.grid_1-1_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.grid_5-4_container {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 100px;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
+.grid_5-4_container img {
+  padding: 20px 0px;
+}
+
+.text-string {
+  line-height: 1.5;
+  padding-top: 15px;
+}

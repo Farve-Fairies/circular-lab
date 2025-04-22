@@ -1,5 +1,8 @@
 ---
 const { title } = Astro.props;
+const { page } = Astro.props;
+const { previous } = Astro.props;
+const { previousURL } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,12 +15,30 @@ const { title } = Astro.props;
     <link class="favicon" rel="icon" href="favicon_io-3/favicon.ico" />
 
     <title>Circular Lab - {title}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
+    <header>
+      <div class="menu">
+        <a href="#">Forside</a> / <a href="#">Labs</a> / <a href="#"
+          >Circular Labs</a
+        >
+        / <a href="/">Circular Lab</a> / <a href={previousURL}>{previous}</a> /
+        <a href="#">{page}</a>
+      </div>
+    </header>
     <main>
       <slot />
     </main>
   </body>
+  <footer></footer>
 </html>
 
 <style>
@@ -32,5 +53,13 @@ const { title } = Astro.props;
   main {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    justify-content: start;
+    align-items: baseline;
   }
 </style>
