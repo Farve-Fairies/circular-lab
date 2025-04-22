@@ -47,9 +47,42 @@ import Accordion from '../components/Accordion.astro';
 </section>
 
 <style>
+        @font-face {
+  font-family: "Helvetica LT STD Condensed";
+  src:
+    url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
+    url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src:
+    url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuebold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Black";
+  src:
+    url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueBlack.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src:
+    url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuelight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
   .offers h2 {
-    font-family: "Helvetica";
-  font-weight: bolder;
+    font-family: "Helvetica Neue Bold";
+    font-weight: bolder;
   font-size: 30pt;
   -webkit-text-stroke: 1px #ff671f;
   text-shadow: #ff905991 0px 4px 11px;

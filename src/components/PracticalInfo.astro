@@ -25,6 +25,39 @@
     <div class="button-shadow"></div>
   </div>
   <style>
+            @font-face {
+  font-family: "Helvetica LT STD Condensed";
+  src:
+    url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
+    url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src:
+    url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuebold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Black";
+  src:
+    url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueBlack.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src:
+    url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
+    url("../fonts/helveticaneuelight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
     .praktisk-indhold {
   background: linear-gradient(-75deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
   border-radius: 2em;
@@ -41,21 +74,21 @@
   pointer-events: auto;
   z-index: 3;
   position: relative;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue Light";
 
 }
 
 .praktisk-indhold a {
   color: #333;
   text-decoration: underline;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue Light";
 
 }
 
 .praktisk-indhold h3 {
   font-size: 1.5rem;
   margin-top: 0;
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue Bold";
 
 }
 @media (max-width: 768px) {
