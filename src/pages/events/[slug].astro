@@ -4,6 +4,8 @@ import Layout from "/src/layouts/Layout.astro";
 import ArrowButton from "/src/components/ArrowButton.astro";
 import Titel from "/src/components/Titel.astro";
 import GlassButton from "../../components/GlassButton.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
 export async function getStaticPaths() {
   const url =
     "https://cbspsmpkfjialzthyppy.supabase.co/rest/v1/events?select=*";
@@ -34,6 +36,7 @@ const formatDate = (date) => {
 const { event } = Astro.props;
 ---
 
+<Header />
 <Layout
   title={event.event_title}
   page={event.event_title}
@@ -95,3 +98,4 @@ const { event } = Astro.props;
     </div>
   </div>
 </Layout>
+<Footer />

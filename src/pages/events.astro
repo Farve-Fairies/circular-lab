@@ -3,6 +3,8 @@
 import Layout from "../layouts/Layout.astro";
 import ArrowButton from "/src/components/ArrowButton.astro";
 import Menu from "/src/components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 const url = "https://cbspsmpkfjialzthyppy.supabase.co/rest/v1/events?select=*";
 const key =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNic3BzbXBrZmppYWx6dGh5cHB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjc3NzIsImV4cCI6MjA1OTg0Mzc3Mn0.uT6SjEaiJR1sSTevguX9qaKc7UK3EGLiF-_PjHwOS94";
@@ -21,6 +23,7 @@ const data = await fetch(url, options).then((res) => res.json());
 console.log(data);
 ---
 
+<Header />
 <Layout title="Events" page="Events" previous="Forside" previousURL="/">
   <div class="content">
     <div class="title">
@@ -87,3 +90,4 @@ console.log(data);
     }
   </div>
 </Layout>
+<Footer />
