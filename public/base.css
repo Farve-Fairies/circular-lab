@@ -155,7 +155,7 @@ a {
   /*  */
 
   .event_card {
-    padding-left: 40px;
+    padding-left: 12rem;
 
     transition: all 0.5s ease-in-out;
   }
@@ -219,12 +219,13 @@ a {
   }
 
   .padding-left {
-    padding-left: 40px;
+    padding-left: 12rem;
   }
 
   .title img {
     display: flex;
     width: 70%;
+    padding-left: 16rem;
   }
 
   .event_display {
@@ -299,4 +300,26 @@ a {
 }
 
 @media (max-width: 1200px) {
+  .grid_5-4_container p {
+    font-size: 90%;
+  }
+
+  .grid_1-1_container {
+    gap: 40px;
+  }
+
+  .border {
+    display: flex;
+    width: 27rem;
+    margin: 0 auto;
+    margin-left: 2vw;
+    margin-top: 20px;
+  }
+  .margin-left2 {
+    margin-left: 2vw;
+  }
+
+  .about_title {
+    margin-top: 40px;
+  }
 }

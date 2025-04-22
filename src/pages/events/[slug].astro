@@ -43,7 +43,7 @@ const { event } = Astro.props;
   previous="Events"
   previousURL="/events"
 >
-  <h1>{event.event_title}</h1>
+  <h1 class="margin-left2">{event.event_title}</h1>
   <div class="grid_5-4_container">
     <div>
       <div class="border">
@@ -66,20 +66,20 @@ const { event } = Astro.props;
           </div>
         </div>
       </div>
+      <div class="margin-left2">
+        <h2 class="about_title">Om {event.event_title}</h2>
+        <p class="text-string">{event.event_description02}</p>
+        <p class="text-string">{event.event_description03}</p>
+        <p class="text-string">{event.event_description04}</p>
+        <p class="text-string">{event.event_description05}</p>
+        <p class="text-string">{event.event_description06}</p>
 
-      <h2>Om {event.event_title}</h2>
-      <p class="text-string">{event.event_description02}</p>
-      <p class="text-string">{event.event_description03}</p>
-      <p class="text-string">{event.event_description04}</p>
-      <p class="text-string">{event.event_description05}</p>
-      <p class="text-string">{event.event_description06}</p>
+        <ArrowButton url={event.extern_link} text="Tilmeld" />
 
-      <ArrowButton url={event.extern_link} text="Tilmeld" />
-
-      <p class="bold-p">Lokation:</p>
-      <p>{event.event_location}</p>
+        <p class="bold-p">Lokation:</p>
+        <p>{event.event_location}</p>
+      </div>
     </div>
-
     <div>
       <img
         class="event_card_img"
