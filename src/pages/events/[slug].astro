@@ -51,11 +51,11 @@ const { event } = Astro.props;
           <div>
             <div class="flex">
               <p class="bold-p">Dato:</p>
-              <p>{formatDate(event.event_date)}</p>
+              <p class="time">{formatDate(event.event_date)}</p>
             </div>
             <div class="flex">
               <p class="bold-p">Tidspunkt:</p>
-              <p>
+              <p class="time">
                 {formatTime(event.event_start)} -
                 {formatTime(event.event_end)}
               </p>
