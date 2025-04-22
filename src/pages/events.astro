@@ -22,9 +22,13 @@ const options = {
 const data = await fetch(url, options).then((res) => res.json());
 console.log(data);
 ---
-
 <Header />
-<Layout title="Events" page="Events" previous="Forside" previousURL="/">
+
+<Layout 
+
+
+title="Events" page="Events" previous="Forside" previousURL="/">
+
   <div class="content">
     <div class="title">
       <img
@@ -89,5 +93,6 @@ console.log(data);
       ))
     }
   </div>
+  <Footer />
+
 </Layout>
-<Footer />
