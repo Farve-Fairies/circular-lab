@@ -33,16 +33,16 @@
     <!-- billede og adresse -->
     <div class="overview">
       <img
-        src="../public/lab_1.png"
+        src="/imgs_circular_lab/index_imgs/lab_1.png"
         alt="Kort over Material Connexion"
-        class="lab_map"
+        class="lab_map1"
       />
       <span>
         <p class="adresse_link_1">
           <a href="https://maps.app.goo.gl/oFCGQ33TzJkJxcY79" target="_blank"
             ><strong>Adresse:</strong> <br /> Guldbergsgade 29N, Lokale A129.</a
           >
-          <img src="public/Vector-4.png" alt="geo tag" />
+          <img src="imgs_circular_lab/index_imgs/Vector-4.png" alt="geo tag" />
         </p>
       </span>
       <p></p>
@@ -75,7 +75,7 @@
     <!--billede og adresse -->
     <div class="overview">
       <img
-        src="../public/lab_2.png"
+        src="imgs_circular_lab/index_imgs/lab_2.png"
         alt="Kort over Material Connexion"
         class="lab_map"
       />
@@ -85,7 +85,7 @@
             ><strong>Adresse:</strong><br /> Guldbergsgade 29N, bygning C, lokale
             C005.</a
           >
-          <img src="public/Vector-5.png" alt="geo tag" />
+          <img src="imgs_circular_lab/index_imgs/Vector-4.png" alt="geo tag" />
         </span>
       </p>
     </div>
@@ -101,7 +101,11 @@
     margin: 30px;
     padding-bottom: 100px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue Light";
+  }
+
+  h2 {
+    font-family: "Helvetica Neue Bold";
   }
   .lab_card_1 {
     grid-column: 2; /* eller 3 for _2 */
@@ -184,5 +188,15 @@
   }
   span img {
     width: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .labs_cards {
+      display: block;
+    }
+
+    .lab_card_1 {
+      margin-bottom: 20px;
+    }
   }
 </style>

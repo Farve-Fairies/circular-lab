@@ -173,7 +173,6 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px 20px 20px 0px;
-    gap: 20px;
   }
 
   .event_text_wrapper {
@@ -197,13 +196,15 @@ a {
   }
 
   .event_essentials {
-    width: 150px;
+    width: 200px;
   }
 
   .event_description {
     position: relative;
-    max-width: 300px;
+    display: flex;
+    max-width: 500px;
     margin-top: 3px;
+    margin-left: 40px;
   }
 
   #MyDate {
@@ -224,12 +225,14 @@ a {
 
   .title img {
     display: flex;
-    width: 70%;
-    padding-left: 16rem;
+    width: 90%;
+    padding-left: 6rem;
   }
 
   .event_display {
     display: flex;
+
+    width: 300px;
   }
 
   .event_display img {
@@ -238,8 +241,12 @@ a {
 
   .event_img_container {
     display: flex;
-    gap: 40px;
-    margin-left: 158px;
+    justify-content: end;
+    margin-right: 180px;
+
+    /* margin-left: 145px; */
+
+    /* margin-left: 114px; */
   }
 }
 
@@ -297,6 +304,10 @@ a {
 }
 .time {
   padding-bottom: 2px;
+}
+
+.event_img {
+  border-radius: 40px;
 }
 
 @media (max-width: 1200px) {

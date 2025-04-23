@@ -1,77 +1,82 @@
 ---
-import GlassButton from './GlassButton.astro'; 
+import GlassButton from "./GlassButton.astro";
 ---
 
-
 <section class="contact-grid">
-  <img src="public/storm.png" alt="Billede af Nikolaj Storm" class="contact-image" />
+  <img
+    src="/imgs_circular_lab/index_imgs/storm.png"
+    alt="Billede af Nikolaj Storm"
+    class="contact-image"
+  />
   <div class="contact-text">
     <h2>Kontakt os</h2>
     <p>
-      Har du spørgsmål eller brug for hjælp? <br> Kontakt os via e-mail eller kom forbi labbet i åbningstiden.
+      Har du spørgsmål eller brug for hjælp? <br /> Kontakt os via e-mail eller kom
+      forbi labbet i åbningstiden.
     </p>
     <div class="button-container">
-        <a href="mailto:circular@kea.dk">
-            <GlassButton text="Send en mail" />   
-          </a>         </div>  </div>
+      <a href="mailto:circular@kea.dk">
+        <GlassButton text="Send en mail" />
+      </a>
+    </div>
+  </div>
 </section>
 
 <style>
-     @font-face {
-  font-family: "Helvetica LT STD Condensed";
-  src:
-    url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
-    url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Helvetica Neue Bold";
-  src:
-    url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
-    url("../fonts/helveticaneuebold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Helvetica Neue Black";
-  src:
-    url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
-    url("../fonts/HelveticaNeueBlack.woff") format("woff");
-  font-weight: lighter;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Helvetica Neue Light";
-  src:
-    url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
-    url("../fonts/helveticaneuelight-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-
-}
-      .button-container a {
-  text-decoration: none; 
-}
+  @font-face {
+    font-family: "Helvetica LT STD Condensed";
+    src:
+      url("../fonts/Helvetica LT Std Condensed.woff2") format("woff2"),
+      url("../fonts/Helvetica LT Std Condensed.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Helvetica Neue Bold";
+    src:
+      url("../fonts/helveticaneuebold-webfont.woff2") format("woff2"),
+      url("../fonts/helveticaneuebold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Helvetica Neue Black";
+    src:
+      url("../fonts/HelveticaNeueBlack.woff2") format("woff2"),
+      url("../fonts/HelveticaNeueBlack.woff") format("woff");
+    font-weight: lighter;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Helvetica Neue Light";
+    src:
+      url("../fonts/helveticaneuelight-webfont.woff2") format("woff2"),
+      url("../fonts/helveticaneuelight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .button-container a {
+    text-decoration: none;
+  }
   .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; 
-    align-items: center; 
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
     padding: 2rem 20rem;
   }
 
   .contact-image {
-    width: 80%; 
+    width: 80%;
     height: auto;
   }
 
   .contact-text h2 {
     font-family: "Helvetica Neue Bold";
     font-weight: bolder;
-  font-size: 30pt;
-  -webkit-text-stroke: 1px #ff671f;
-  text-shadow: #ff905991 0px 4px 11px;
-  color: #ededed;
+    font-size: 30pt;
+    -webkit-text-stroke: 1px #ff671f;
+    text-shadow: #ff905991 0px 4px 11px;
+    color: #ededed;
   }
 
   .contact-text p {
@@ -79,31 +84,30 @@ import GlassButton from './GlassButton.astro';
     line-height: 1.5;
     color: black;
     font-family: "Helvetica Neue Light";
-
   }
   @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr; 
-    padding: 1rem; 
-  }
+    .contact-grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
 
-  .contact-image {
-    width: 100%; 
-    max-width: 300px; 
-    margin: 0 auto; 
-  }
+    .contact-image {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
 
-  .contact-text h2 {
-    font-size: 24pt;
-  }
+    .contact-text h2 {
+      font-size: 24pt;
+    }
 
-  .contact-text p {
-    font-size: 0.9rem; 
-    line-height: 1.4;
-  }
+    .contact-text p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
 
-  .button-container {
-    margin-top: 1rem; 
+    .button-container {
+      margin-top: 1rem;
+    }
   }
-}
 </style>
