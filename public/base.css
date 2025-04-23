@@ -257,6 +257,14 @@ a {
 /*  */
 
 /* SINGLE CSS */
+#button_wrapper {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: none;
+}
 
 .flex {
   display: flex;
