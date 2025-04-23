@@ -27,10 +27,7 @@ const { previousURL } = Astro.props;
   <body>
     <header>
       <div class="menu">
-        <a href="#">Forside</a> / <a href="#">Labs</a> / <a href="#"
-          >Circular Labs</a
-        >
-        / <a href="/">Circular Lab</a> / <a href={previousURL}>{previous}</a> /
+        <a href={previousURL}>{previous}</a> /
         <a href="#">{page}</a>
       </div>
     </header>

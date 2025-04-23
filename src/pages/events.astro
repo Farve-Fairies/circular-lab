@@ -22,13 +22,10 @@ const options = {
 const data = await fetch(url, options).then((res) => res.json());
 console.log(data);
 ---
+
 <Header />
 
-<Layout 
-
-
-title="Events" page="Events" previous="Forside" previousURL="/">
-
+<Layout title="Events" page="Events" previous="Forside" previousURL="/">
   <div class="content">
     <div class="title">
       <img
@@ -50,6 +47,8 @@ title="Events" page="Events" previous="Forside" previousURL="/">
                 <div class="event_text_wrapper">
                   <div class="event_display">
                     <img
+                      width="241px"
+                      height="197px"
                       class="event_display_img"
                       src={`/imgs_circular_lab/${event.event_img01}`}
                       alt=""
@@ -94,5 +93,4 @@ title="Events" page="Events" previous="Forside" previousURL="/">
     }
   </div>
   <Footer />
-
 </Layout>
